@@ -8,3 +8,13 @@
 
 Note:
 Check core.min.js -> search "chinhxac" -> có thể nên đổi thành precision, viết thường
+
+Kèm line tin tức, giá vàng,  chứng khoán, thời tiết hai bên trái phải
+
+Anh và tiếng Trung
+
+Zalo lịnk
+
+cokhihk.com
+
+<a class="phone" href="tel:+840982102088">+84-329809522</a>

@@ -230,6 +230,9 @@
 			for (let i = 0; i < swipersBg.length; i++) {
 				let swiperBg = swipersBg[i];
 				swiperBg.style.backgroundImage = 'url(' + swiperBg.getAttribute('data-slide-bg') + ')';
+				swiperBg.style.backgroundRepeat = 'no-repeat';
+				swiperBg.style.backgroundSize = 'cover';
+				swiperBg.style.backgroundPosition = 'center';
 			}
 		}
 
