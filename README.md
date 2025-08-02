@@ -17,4 +17,4 @@ Zalo lịnk
 
 cokhihk.com
 
-<a class="phone" href="tel:+840982102088">+84-329809522</a>
+<a class="phone" href="tel:0329809522">0329809522</a>
