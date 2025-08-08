@@ -33,7 +33,7 @@
                 <li>
                   <div class="unit unit-spacing-xs">
                     <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                    <div class="unit-body"><a class="address" href="#">{{ t('company.address') }}</a></div>
+                    <div class="unit-body"><a class="address" href="#">21, Huu Cuoc, O Dien, Ha Noi City</a></div>
                   </div>
                 </li>
               </ul>
@@ -70,7 +70,7 @@
                     <li>
                       <div class="unit unit-spacing-xs">
                         <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                        <div class="unit-body"><a class="address" href="#">{{ t('company.address') }}</a></div>
+                        <div class="unit-body"><a class="address" href="#">21, Huu Cuoc, O Dien, Ha Noi City</a></div>
                       </div>
                     </li>
                   </ul>

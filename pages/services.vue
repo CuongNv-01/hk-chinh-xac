@@ -4,16 +4,16 @@
     <section class="bg-gray-7">
       <div class="breadcrumbs-custom box-transform-wrap context-dark">
         <div class="container">
-          <h3 class="breadcrumbs-custom-title" style="color: #000; font-weight: 900;">Dịch vụ của chúng tôi</h3>
+          <h3 class="breadcrumbs-custom-title" style="color: #000; font-weight: 900;">{{ t('servicesPage.pageTitle') }}</h3>
           <div class="breadcrumbs-custom-decor"></div>
         </div>
         <div class="box-transform" style="background-image: url(/logo/banner.png);"></div>
       </div>
       <div class="container">
         <ul class="breadcrumbs-custom-path">
-          <li><NuxtLink to="/">Home</NuxtLink></li>
+          <li><NuxtLink to="/">{{ t('common.home') }}</NuxtLink></li>
           <li><a href="#">Pages</a></li>
-          <li class="active">Dịch vụ</li>
+          <li class="active">{{ t('common.services') }}</li>
         </ul>
       </div>
     </section>
@@ -52,66 +52,63 @@
 </template>
 
 <script setup lang="ts">
-// SEO metadata
-definePageMeta({
-  title: 'Dịch vụ - HK Chính Xác',
-  description: 'Các dịch vụ chuyên nghiệp của HK Chính Xác: sản xuất khuôn mẫu, gia công CNC, sản phẩm nhựa, thiết kế khuôn mẫu, bảo trì sửa chữa và tư vấn kỹ thuật.'
-})
+// i18n composable
+const { t } = useI18n()
 
 useHead({
-  title: 'Dịch vụ - HK Chính Xác',
+  title: computed(() => `${t('servicesPage.pageTitle')} - ${t('company.name')}`),
   meta: [
-    { name: 'description', content: 'Các dịch vụ chuyên nghiệp của HK Chính Xác: sản xuất khuôn mẫu, gia công CNC, sản phẩm nhựa, thiết kế khuôn mẫu, bảo trì sửa chữa và tư vấn kỹ thuật.' },
-    { property: 'og:title', content: 'Dịch vụ - HK Chính Xác' },
-    { property: 'og:description', content: 'Tìm hiểu về các dịch vụ gia công cơ khí chính xác, sản xuất khuôn mẫu và tư vấn kỹ thuật chuyên nghiệp' },
+    { name: 'description', content: computed(() => t('servicesPage.subtitle')) },
+    { property: 'og:title', content: computed(() => `${t('servicesPage.pageTitle')} - ${t('company.name')}`) },
+    { property: 'og:description', content: computed(() => t('servicesPage.subtitle')) },
     { property: 'og:image', content: '/logo/banner.png' },
     { property: 'og:type', content: 'website' }
   ]
 })
 
-// Services data
-const services = [
+// Services data using translations
+const services = computed(() => [
   {
     id: 1,
-    title: 'Sản xuất khuôn mẫu',
-    description: 'Khuôn ép nhựa, khuôn đúc tiêu chuẩn',
+    title: t('services.plasticMolds.title'),
+    description: t('services.plasticMolds.description'),
     image: '/images/internal/nhua-1.jpeg',
     icon: 'mdi mdi-road-variant'
   },
   {
     id: 2,
-    title: 'Gia công CNC chính xác',
-    description: 'Công nghệ CNC tiên tiến, độ chính xác cao',
+    title: t('services.cncMachining.title'),
+    description: t('services.cncMachining.description'),
     image: '/images/internal/b13.jpeg',
     icon: 'mdi mdi-home-modern'
   },
   {
     id: 3,
-    title: 'Sản phẩm nhựa',
-    description: 'Sản phẩm nhựa chất lượng cao',
+    title: t('services.plasticProducts.title'),
+    description: t('services.plasticProducts.description'),
     image: '/images/internal/may-1.jpeg',
     icon: 'mdi mdi-worker'
   },
   {
     id: 4,
-    title: 'Thiết kế khuôn mẫu',
-    description: 'Thiết kế 3D/CAD/CAM chuyên nghiệp',
+    title: t('services.technicalConsulting.title'),
+    description: t('services.technicalConsulting.description'),
     image: '/images/internal/nhom-4.jpeg',
     icon: 'mdi mdi-home'
   },
   {
     id: 5,
-    title: 'Bảo trì và sửa chữa',
-    description: 'Dịch vụ bảo trì khuôn mẫu định kỳ',
+    title: t('services.warrantySupport.title'),
+    description: t('services.warrantySupport.description'),
     image: '/images/internal/nhom-1.jpeg',
     icon: 'mdi mdi-ungroup'
   },
   {
     id: 6,
-    title: 'Tư vấn kỹ thuật',
-    description: 'Tư vấn giải pháp tối ưu cho sản xuất',
+    title: t('services.qualityControl.title'),
+    description: t('services.qualityControl.description'),
     image: '/images/internal/b11.jpeg',
     icon: 'mdi mdi-math-compass'
   }
-]
+])
 </script>

@@ -4,16 +4,16 @@
     <section class="bg-gray-7">
       <div class="breadcrumbs-custom box-transform-wrap context-dark">
         <div class="container">
-          <h3 class="breadcrumbs-custom-title">Sản xuất khuôn mẫu</h3>
+          <h3 class="breadcrumbs-custom-title">{{ serviceContent.title }}</h3>
           <div class="breadcrumbs-custom-decor"></div>
         </div>
         <div class="box-transform" style="background-image: url(/images/bg-typography.jpg);"></div>
       </div>
       <div class="container">
         <ul class="breadcrumbs-custom-path">
-          <li><NuxtLink to="/">Home</NuxtLink></li>
-          <li><a href="#">Pages</a></li>
-          <li class="active">Sản xuất khuôn mẫu</li>
+          <li><NuxtLink to="/">{{ t('serviceDetail.breadcrumbs.home') }}</NuxtLink></li>
+          <li><a href="#">{{ t('serviceDetail.breadcrumbs.pages') }}</a></li>
+          <li class="active">{{ serviceContent.breadcrumb }}</li>
         </ul>
       </div>
     </section>
@@ -24,26 +24,26 @@
         <div class="row row-60">
           <div class="col-md-7 col-xl-8">
             <div class="single-service">
-              <h4>Công ty HK Chính Xác</h4>
-              <p>Công Ty HK là đơn vị hàng đầu trong lĩnh vực sản xuất khuôn mẫu và gia công cơ khí theo tiêu chuẩn. Chúng tôi chuyên sản xuất các loại mặt hàng gia dụng, sản phẩm cơ khí, các linh kiện, phụ tùng cho các ngành nghề ô tô, xe máy...</p>
+              <h4>{{ serviceContent.title }}</h4>
+              <p>{{ serviceContent.description }}</p>
               <div class="row row-50 flex-xl-row-reverse">
                 <div class="col-xl-5">
                   <article class="team-classic">
                     <a class="team-classic-figure" href="#">
                       <img src="/images/internal/b19.jpeg" alt="" width="270" height="182"/>
                     </a>
-                    <div class="team-classic-title">Liên hệ với chúng tôi để được tư vấn miễn phí!</div>
+                    <div class="team-classic-title">{{ t('serviceDetail.contactCall') }}</div>
                   </article>
                 </div>
                 <div class="col-xl-7">
                   <!-- Bootstrap collapse-->
                   <div class="card-group-custom card-group-corporate" id="accordion3" role="tablist" aria-multiselectable="false">
-                    <article v-for="(item, index) in accordionItems" 
+                    <article v-for="(item, index) in accordionItems"
                              :key="item.id"
                              class="card card-custom card-corporate">
                       <div class="card-header" :id="`accordion3Heading${index + 1}`" role="tab">
                         <div class="card-title">
-                          <a role="button" 
+                          <a role="button"
                              :class="{ collapsed: index !== 0 }"
                              @click.prevent="toggleAccordion(index)"
                              :aria-expanded="activeAccordion === index">
@@ -52,9 +52,9 @@
                           </a>
                         </div>
                       </div>
-                      <div :class="['collapse', { show: activeAccordion === index }]" 
-                           :id="`accordion3Collapse${index + 1}`" 
-                           role="tabpanel" 
+                      <div :class="['collapse', { show: activeAccordion === index }]"
+                           :id="`accordion3Collapse${index + 1}`"
+                           role="tabpanel"
                            :aria-labelledby="`accordion3Heading${index + 1}`">
                         <div class="card-body">
                           <p>{{ item.content }}</p>
@@ -70,37 +70,37 @@
             <div class="aside aside-services">
               <div class="row row-60">
                 <div class="aside-item col-12">
-                  <h5 class="aside-services-title">Dịch vụ của chúng tôi</h5>
+                  <h5 class="aside-services-title">{{ t('serviceDetail.sidebar.servicesTitle') }}</h5>
                   <ul class="list-category">
                     <li class="list-category-item">
-                      <NuxtLink :class="{ active: true }" to="/services">Tất cả dịch vụ</NuxtLink>
+                      <NuxtLink :class="{ active: serviceType === 'moldManufacturing' }" to="/services">{{ t('serviceDetail.sidebar.allServices') }}</NuxtLink>
                     </li>
                     <li class="list-category-item">
-                      <a href="#">Sản xuất khuôn mẫu</a>
+                      <NuxtLink :class="{ active: serviceType === 'plasticMolds' }" to="/service?type=plasticMolds">{{ t('services.plasticMolds.title') }}</NuxtLink>
                     </li>
                     <li class="list-category-item">
-                      <a href="#">Gia công CNC</a>
+                      <NuxtLink :class="{ active: serviceType === 'cncMachining' }" to="/service?type=cncMachining">{{ t('services.cncMachining.title') }}</NuxtLink>
                     </li>
                     <li class="list-category-item">
-                      <a href="#">Sản xuất sản phẩm nhựa</a>
+                      <NuxtLink :class="{ active: serviceType === 'plasticProducts' }" to="/service?type=plasticProducts">{{ t('services.plasticProducts.title') }}</NuxtLink>
                     </li>
                     <li class="list-category-item">
-                      <a href="#">Thiết kế khuôn mẫu</a>
+                      <NuxtLink :class="{ active: serviceType === 'technicalConsulting' }" to="/service?type=technicalConsulting">{{ t('services.technicalConsulting.title') }}</NuxtLink>
                     </li>
                     <li class="list-category-item">
-                      <a href="#">Bảo trì và sửa chữa</a>
+                      <NuxtLink :class="{ active: serviceType === 'qualityControl' }" to="/service?type=qualityControl">{{ t('services.qualityControl.title') }}</NuxtLink>
                     </li>
                     <li class="list-category-item">
-                      <a href="#">Tư vấn kỹ thuật</a>
+                      <NuxtLink :class="{ active: serviceType === 'warrantySupport' }" to="/service?type=warrantySupport">{{ t('services.warrantySupport.title') }}</NuxtLink>
                     </li>
                   </ul>
                 </div>
                 <div class="aside-item col-sm-6 col-md-12">
-                  <h5 class="aside-services-title">Liên hệ chúng tôi</h5>
+                  <h5 class="aside-services-title">{{ t('serviceDetail.sidebar.contactTitle') }}</h5>
                   <!-- Box contacts-->
                   <div class="box-contacts">
                     <div class="box-contacts-item">
-                      <div class="box-contacts-title">Tư vấn miễn phí</div>
+                      <div class="box-contacts-title">{{ t('serviceDetail.sidebar.freeConsulting') }}</div>
                       <div class="unit unit-spacing-xs flex-column flex-md-row">
                         <div class="unit-left"><span class="icon icon-24 mdi mdi-phone"></span></div>
                         <div class="unit-body">
@@ -109,7 +109,7 @@
                       </div>
                     </div>
                     <div class="box-contacts-item">
-                      <div class="box-contacts-title">Văn phòng</div>
+                      <div class="box-contacts-title">{{ t('serviceDetail.sidebar.office') }}</div>
                       <div class="unit unit-spacing-xs flex-column flex-md-row">
                         <div class="unit-left"><span class="icon icon-28 mdi mdi-map-marker"></span></div>
                         <div class="unit-body">
@@ -118,7 +118,7 @@
                       </div>
                     </div>
                     <div class="box-contacts-item">
-                      <div class="box-contacts-title">E-mail</div>
+                      <div class="box-contacts-title">{{ t('contactPage.info.email') }}</div>
                       <div class="unit unit-spacing-xs flex-column flex-md-row">
                         <div class="unit-left"><span class="icon mdi mdi-email"></span></div>
                         <div class="unit-body">
@@ -129,10 +129,10 @@
                   </div>
                 </div>
                 <div class="aside-item col-sm-6 col-md-12">
-                  <h5 class="aside-services-title">Tài liệu công ty</h5>
+                  <h5 class="aside-services-title">{{ t('serviceDetail.sidebar.companyDocuments') }}</h5>
                   <NuxtLink class="button button-lg button-icon button-icon-left button-primary button-winona" to="/contact">
                     <span class="icon mdi mdi-download"></span>
-                    <span>Tải xuống</span>
+                    <span>{{ t('serviceDetail.sidebar.download') }}</span>
                   </NuxtLink>
                 </div>
               </div>
@@ -147,65 +147,65 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 col-xl-8">
-            <h4>Bạn có câu hỏi? Liên hệ chúng tôi</h4>
+            <h4>{{ t('serviceDetail.contactForm.title') }}</h4>
             <form class="rd-form rd-mailform" @submit.prevent="submitForm">
               <div class="row row-20 gutters-20">
                 <div class="col-md-6">
                   <div class="form-wrap">
-                    <input v-model="contactForm.name" 
-                           class="form-input" 
-                           id="contact-your-name-4" 
-                           type="text" 
-                           name="name" 
+                    <input v-model="contactForm.name"
+                           class="form-input"
+                           id="contact-your-name-4"
+                           type="text"
+                           name="name"
                            required>
-                    <label class="form-label" for="contact-your-name-4">Họ và tên*</label>
+                    <label class="form-label" for="contact-your-name-4">{{ t('serviceDetail.contactForm.name') }}*</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-wrap">
-                    <input v-model="contactForm.email" 
-                           class="form-input" 
-                           id="contact-email-4" 
-                           type="email" 
-                           name="email" 
+                    <input v-model="contactForm.email"
+                           class="form-input"
+                           id="contact-email-4"
+                           type="email"
+                           name="email"
                            required>
-                    <label class="form-label" for="contact-email-4">Email*</label>
+                    <label class="form-label" for="contact-email-4">{{ t('serviceDetail.contactForm.email') }}*</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-wrap">
-                    <input v-model="contactForm.company" 
-                           class="form-input" 
-                           id="contact-company-name-4" 
-                           type="text" 
-                           name="company" 
+                    <input v-model="contactForm.company"
+                           class="form-input"
+                           id="contact-company-name-4"
+                           type="text"
+                           name="company"
                            required>
-                    <label class="form-label" for="contact-company-name-4">Tên công ty*</label>
+                    <label class="form-label" for="contact-company-name-4">{{ t('serviceDetail.contactForm.company') }}*</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-wrap">
-                    <input v-model="contactForm.phone" 
-                           class="form-input" 
-                           id="contact-phone-4" 
-                           type="text" 
+                    <input v-model="contactForm.phone"
+                           class="form-input"
+                           id="contact-phone-4"
+                           type="text"
                            name="phone">
-                    <label class="form-label" for="contact-phone-4">Số điện thoại*</label>
+                    <label class="form-label" for="contact-phone-4">{{ t('serviceDetail.contactForm.phone') }}*</label>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="form-wrap">
-                    <label class="form-label" for="contact-message-4">Nội dung</label>
-                    <textarea v-model="contactForm.message" 
-                              class="form-input textarea-lg" 
-                              id="contact-message-4" 
-                              name="message" 
+                    <label class="form-label" for="contact-message-4">{{ t('serviceDetail.contactForm.message') }}</label>
+                    <textarea v-model="contactForm.message"
+                              class="form-input textarea-lg"
+                              id="contact-message-4"
+                              name="message"
                               required></textarea>
                   </div>
                 </div>
               </div>
               <button class="button button-primary button-winona" type="submit">
-                {{ isSubmitting ? 'Đang gửi...' : 'Gửi yêu cầu' }}
+                {{ isSubmitting ? t('serviceDetail.contactForm.submitting') : t('serviceDetail.contactForm.submit') }}
               </button>
             </form>
           </div>
@@ -218,18 +218,79 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-// SEO metadata
-definePageMeta({
-  title: 'Sản xuất khuôn mẫu - HK Chính Xác',
-  description: 'Dịch vụ sản xuất khuôn mẫu chuyên nghiệp của HK Chính Xác với công nghệ hiện đại, đội ngũ chuyên gia giàu kinh nghiệm và cam kết chất lượng cao nhất.'
+// i18n
+const { t } = useI18n()
+const route = useRoute()
+
+// Get service type from query parameter or default to 'moldManufacturing'
+const serviceType = computed(() => route.query.type || 'moldManufacturing')
+
+// Dynamic service content based on service type
+const serviceContent = computed(() => {
+  const type = serviceType.value as string
+  switch (type) {
+    case 'plasticMolds':
+      return {
+        title: t('services.plasticMolds.title'),
+        description: t('services.plasticMolds.description'),
+        breadcrumb: t('services.plasticMolds.title')
+      }
+    case 'cncMachining':
+      return {
+        title: t('services.cncMachining.title'),
+        description: t('services.cncMachining.description'),
+        breadcrumb: t('services.cncMachining.title')
+      }
+    case 'plasticProducts':
+      return {
+        title: t('services.plasticProducts.title'),
+        description: t('services.plasticProducts.description'),
+        breadcrumb: t('services.plasticProducts.title')
+      }
+    case 'technicalConsulting':
+      return {
+        title: t('services.technicalConsulting.title'),
+        description: t('services.technicalConsulting.description'),
+        breadcrumb: t('services.technicalConsulting.title')
+      }
+    case 'qualityControl':
+      return {
+        title: t('services.qualityControl.title'),
+        description: t('services.qualityControl.description'),
+        breadcrumb: t('services.qualityControl.title')
+      }
+    case 'warrantySupport':
+      return {
+        title: t('services.warrantySupport.title'),
+        description: t('services.warrantySupport.description'),
+        breadcrumb: t('services.warrantySupport.title')
+      }
+    default:
+      return {
+        title: t('serviceDetail.pageTitle'),
+        description: t('serviceDetail.companyDescription'),
+        breadcrumb: t('serviceDetail.pageTitle')
+      }
+  }
+})
+
+// Dynamic SEO content
+const dynamicSEO = computed(() => {
+  const content = serviceContent.value
+  return {
+    title: `${content.title} - ${t('company.name')}`,
+    description: content.description,
+    ogTitle: `${content.title} - ${t('company.name')}`,
+    ogDescription: content.description
+  }
 })
 
 useHead({
-  title: 'Sản xuất khuôn mẫu - HK Chính Xác',
+  title: () => dynamicSEO.value.title,
   meta: [
-    { name: 'description', content: 'Dịch vụ sản xuất khuôn mẫu chuyên nghiệp của HK Chính Xác với công nghệ hiện đại, đội ngũ chuyên gia giàu kinh nghiệm và cam kết chất lượng cao nhất.' },
-    { property: 'og:title', content: 'Sản xuất khuôn mẫu - HK Chính Xác' },
-    { property: 'og:description', content: 'Chuyên sản xuất khuôn mẫu nhựa, khuôn đúc với độ chính xác cao và hỗ trợ tư vấn kỹ thuật chuyên nghiệp' },
+    { name: 'description', content: () => dynamicSEO.value.description },
+    { property: 'og:title', content: () => dynamicSEO.value.ogTitle },
+    { property: 'og:description', content: () => dynamicSEO.value.ogDescription },
     { property: 'og:image', content: '/logo/banner.png' },
     { property: 'og:type', content: 'website' }
   ]
@@ -249,28 +310,28 @@ const contactForm = ref({
 })
 
 // Accordion data
-const accordionItems = [
+const accordionItems = computed(() => [
   {
     id: 1,
-    title: 'Cam kết chất lượng cao',
-    content: 'Tất cả sản phẩm của chúng tôi đều được kiểm tra chất lượng nghiêm ngặt trước khi giao cho khách hàng. Chúng tôi cam kết độ chính xác đạt tiêu chuẩn, đảm bảo sự hài lòng của khách hàng.'
+    title: t('serviceDetail.accordion.qualityCommitment.title'),
+    content: t('serviceDetail.accordion.qualityCommitment.content')
   },
   {
     id: 2,
-    title: 'Đội ngũ chuyên nghiệp',
-    content: 'Đội ngũ kỹ sư và kỹ thuật viên của chúng tôi đều có trình độ cao và kinh nghiệm dày dặn trong lĩnh vực gia công chế tạo khuôn mẫu, đồ gia dụng, jigs.'
+    title: t('serviceDetail.accordion.professionalTeam.title'),
+    content: t('serviceDetail.accordion.professionalTeam.content')
   },
   {
     id: 3,
-    title: 'Hỗ trợ 24/7',
-    content: 'Chúng tôi luôn sẵn sàng hỗ trợ khách hàng 24/7, kể cả trong quá trình sản xuất và sau khi bàn giao sản phẩm.'
+    title: t('serviceDetail.accordion.support247.title'),
+    content: t('serviceDetail.accordion.support247.content')
   },
   {
     id: 4,
-    title: 'Thiết bị hiện đại',
-    content: 'Chúng tôi sở hữu hệ thống máy CNC hiện đại nhất, đảm bảo độ chính xác cao nhất cho mọi sản phẩm.'
+    title: t('serviceDetail.accordion.modernEquipment.title'),
+    content: t('serviceDetail.accordion.modernEquipment.content')
   }
-]
+])
 
 // Methods
 const toggleAccordion = (index: number) => {
@@ -279,16 +340,16 @@ const toggleAccordion = (index: number) => {
 
 const submitForm = async () => {
   if (isSubmitting.value) return
-  
+
   isSubmitting.value = true
-  
+
   try {
     // Here you would typically send the form data to your backend
     console.log('Contact form submitted:', contactForm.value)
-    
+
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000))
-    
+
     // Reset form after successful submission
     contactForm.value = {
       name: '',
@@ -297,12 +358,12 @@ const submitForm = async () => {
       phone: '',
       message: ''
     }
-    
-    alert('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất.')
-    
+
+    alert(t('serviceDetail.contactForm.successMessage'))
+
   } catch (error) {
     console.error('Form submission error:', error)
-    alert('Có lỗi xảy ra. Vui lòng thử lại sau.')
+    alert(t('serviceDetail.contactForm.errorMessage'))
   } finally {
     isSubmitting.value = false
   }

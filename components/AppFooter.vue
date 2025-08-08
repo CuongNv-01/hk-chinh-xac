@@ -6,14 +6,14 @@
         <div class="row row-50 row-lg-0 no-gutters">
           <div class="col-sm-6 col-lg-4 wow fadeInRight" data-wow-delay="0s">
             <div class="footer-classic-header">
-              <h6 class="footer-classic-title">Liên kết nhanh</h6>
+              <h6 class="footer-classic-title">{{ t('footer.quickLinks') }}</h6>
             </div>
             <div class="footer-classic-body">
               <ul class="footer-classic-list d-inline-block d-sm-block">
-                <li><NuxtLink to="/about">Về chúng tôi</NuxtLink></li>
-                <li><a href="#">Câu hỏi thường gặp</a></li>
-                <li><a href="#">Đội ngũ</a></li>
-                <li><NuxtLink to="/contact">Liên hệ</NuxtLink></li>
+                <li><NuxtLink :to="localePath('/about')">{{ t('common.aboutUs') }}</NuxtLink></li>
+                <li><a href="#">{{ t('footer.faq') }}</a></li>
+                <li><a href="#">{{ t('footer.team') }}</a></li>
+                <li><NuxtLink :to="localePath('/contact')">{{ t('common.contact') }}</NuxtLink></li>
               </ul>
               <ul class="list-inline footer-social-list">
                 <li><a class="icon mdi mdi-facebook" href="#"></a></li>
@@ -26,7 +26,7 @@
           <div class="col-sm-6 col-lg-4 wow fadeInRight" data-wow-delay=".1s">
             <div class="footer-classic-header">
               <div class="box-width-230">
-                <h6 class="footer-classic-title">Thông tin liên hệ</h6>
+                <h6 class="footer-classic-title">{{ t('footer.contactInfo') }}</h6>
               </div>
             </div>
             <div class="footer-classic-body">
@@ -45,7 +45,7 @@
                     </div>
                   </div>
                 </div>
-                <NuxtLink class="button button-sm button-primary button-winona" to="/contact">Yêu cầu báo giá sản phẩm</NuxtLink>
+                <NuxtLink class="button button-sm button-primary button-winona" :to="localePath('/contact')">{{ t('footer.requestQuote') }}</NuxtLink>
               </div>
             </div>
           </div>
@@ -59,9 +59,9 @@
           <span>&copy;&nbsp;</span>
           <span class="copyright-year">{{ currentYear }}</span>
           <span>&nbsp;</span>
-          <span>HK Chính Xác</span>
+          <span>{{ t('company.name') }}</span>
           <span>.&nbsp;</span>
-          <NuxtLink to="/privacy-policy">Chính sách bảo mật</NuxtLink>
+          <NuxtLink :to="localePath('/privacy-policy')">{{ t('common.privacyPolicy') }}</NuxtLink>
         </p>
       </div>
     </div>
@@ -70,6 +70,9 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+
+const { t } = useI18n()
+const localePath = useLocalePath()
 
 const currentYear = computed(() => new Date().getFullYear())
 </script>

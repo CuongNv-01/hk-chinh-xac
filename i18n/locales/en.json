@@ -106,5 +106,213 @@
     "name": "HK Precision",
     "fullName": "HK Precision Mechanical Technology",
     "description": "HK Precision Mechanical Technology specializes in manufacturing plastic molds, aluminum molds, stamping dies, fixtures, and inspection jigs with high precision."
+  },
+  "about": {
+    "pageTitle": "About Us",
+    "title": "HK Precision Mechanical Technology",
+    "subtitle": "Your trusted partner in precision mechanical machining",
+    "description": "HK Precision was established in 2015, specializing in manufacturing plastic molds, aluminum molds, stamping dies, and precision mechanical products. With a team of experienced engineers and modern equipment, we are committed to delivering high-quality products to our customers.",
+    "seoDescription": "Learn about HK Precision Company - a leading unit in the field of mold manufacturing and precision mechanical machining with modern technology and professional team.",
+    "ogDescription": "HK Company specializes in mold manufacturing and mechanical machining according to standards with modern technology.",
+    "experienceTitle": "Years of experience",
+    "orientation": "Orientation",
+    "goals": "Goals",
+    "orientationTitle": "Our orientation",
+    "orientationContent": "The company aims to become a pioneer in the field of production, plastic molds, continuously innovating, improving product/service quality and building sustainable value for customers, community and staff.",
+    "goalsTitle": "Development goals",
+    "goalsContent1": "To become the leading enterprise in high precision mechanical machining in Vietnam. Expand export market to foreign countries.",
+    "goalsContent2": "Invest in modern machinery and equipment systems, improve product and service quality. Build a professional, creative and dedicated team to customers.",
+    "companyIntroTitle": "Introduction to HK Company",
+    "companyIntroContent": "HK Company is a leading unit in the field of mold manufacturing and mechanical machining according to standards. We specialize in manufacturing household items, mechanical products, components, spare parts for automotive, motorbike industries...",
+    "modernTechDescription": "Using advanced CNC machines and Charmilles EDM systems.",
+    "precisionEquipmentDescription": "Sumitomo injection molding machines, Zeiss CMM inspection equipment ensuring high precision.",
+    "internationalStandardsTitle": "International Standards",
+    "internationalStandardsDescription": "Meeting FUTABA, DME, HASCO standards - ensuring the best product quality.",
+    "mission": {
+      "title": "Mission",
+      "content": "To provide precision mechanical machining solutions with the highest quality, meeting all customer needs domestically and internationally."
+    },
+    "vision": {
+      "title": "Vision",
+      "content": "To become Vietnam's leading supplier in mold manufacturing and precision mechanical machining."
+    },
+    "values": {
+      "title": "Core Values",
+      "quality": "Quality is our top priority",
+      "innovation": "Continuous innovation and improvement",
+      "customer": "Customer-centric approach",
+      "integrity": "Reputation and responsibility"
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "With over 50 skilled engineers and workers, HK Precision takes pride in our professional and dedicated team."
+    }
+  },
+  "servicesPage": {
+    "pageTitle": "Our Services",
+    "title": "Professional Services",
+    "subtitle": "Comprehensive solutions for all precision mechanical machining needs"
+  },
+  "galleryPage": {
+    "pageTitle": "Products & Projects",
+    "title": "Featured Products",
+    "subtitle": "Explore our representative products and projects"
+  },
+  "contactPage": {
+    "pageTitle": "Contact",
+    "title": "Get In Touch With Us",
+    "subtitle": "We are always ready to listen and support you",
+    "breadcrumbs": {
+      "home": "Home",
+      "pages": "Pages",
+      "contacts": "Contacts"
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message Content",
+      "selectService": "Select Service",
+      "serviceOptions": {
+        "plasticMolds": "Plastic Molds",
+        "cncMachining": "CNC Machining",
+        "plasticProducts": "Plastic Products"
+      },
+      "send": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Thank you for contacting us! We will respond as soon as possible.",
+      "errorMessage": "An error occurred. Please try again later."
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "social": "Social Media",
+      "workingHours": "Working Hours",
+      "workingTime": "Monday - Friday: 8:00 - 17:00"
+    },
+    "seo": {
+      "title": "Contact - HK Precision",
+      "description": "Contact HK Precision for consultation on mold manufacturing, CNC machining, and precision plastic products. Hotline: 0982102088 | 0329809522",
+      "ogTitle": "Contact - HK Precision",
+      "ogDescription": "Contact us now for free consultation on precision mechanical processing services"
+    }
+  },
+  "serviceDetail": {
+    "overview": "Overview",
+    "features": "Features",
+    "applications": "Applications",
+    "process": "Process",
+    "getQuote": "Request Quote",
+    "relatedServices": "Related Services",
+    "pageTitle": "Mold Manufacturing",
+    "breadcrumbs": {
+      "home": "Home",
+      "pages": "Pages",
+      "service": "Mold Manufacturing"
+    },
+    "companyTitle": "HK Precision Company",
+    "companyDescription": "HK Company is a leading unit in the field of mold manufacturing and mechanical machining according to standards. We specialize in manufacturing household items, mechanical products, components, spare parts for automotive, motorbike industries...",
+    "contactCall": "Contact us for free consultation!",
+    "accordion": {
+      "qualityCommitment": {
+        "title": "High Quality Commitment",
+        "content": "All our products undergo strict quality inspection before delivery to customers. We guarantee precision meets standards, ensuring customer satisfaction."
+      },
+      "professionalTeam": {
+        "title": "Professional Team",
+        "content": "Our team of engineers and technicians have high qualifications and extensive experience in mold manufacturing, household items, and jigs machining."
+      },
+      "support247": {
+        "title": "24/7 Support",
+        "content": "We are always ready to support customers 24/7, during production and after product delivery."
+      },
+      "modernEquipment": {
+        "title": "Modern Equipment",
+        "content": "We own the most advanced CNC machine systems, ensuring the highest precision for all products."
+      }
+    },
+    "sidebar": {
+      "servicesTitle": "Our Services",
+      "allServices": "All Services",
+      "moldManufacturing": "Mold Manufacturing",
+      "cncMachining": "CNC Machining",
+      "plasticProduction": "Plastic Product Manufacturing",
+      "moldDesign": "Mold Design",
+      "maintenanceRepair": "Maintenance & Repair",
+      "technicalConsulting": "Technical Consulting",
+      "contactTitle": "Contact Us",
+      "freeConsulting": "Free Consultation",
+      "office": "Office",
+      "companyDocuments": "Company Documents",
+      "download": "Download"
+    },
+    "contactForm": {
+      "title": "Have a question? Contact us",
+      "name": "Full Name",
+      "email": "Email",
+      "company": "Company Name",
+      "phone": "Phone Number",
+      "message": "Message Content",
+      "submit": "Send Request",
+      "submitting": "Sending...",
+      "successMessage": "Thank you for contacting us! We will respond as soon as possible.",
+      "errorMessage": "An error occurred. Please try again later."
+    },
+    "seo": {
+      "title": "Mold Manufacturing - HK Precision",
+      "description": "Professional mold manufacturing services by HK Precision with modern technology, experienced expert team and commitment to highest quality.",
+      "ogTitle": "Mold Manufacturing - HK Precision",
+      "ogDescription": "Specializing in plastic mold and casting mold manufacturing with high precision and professional technical consulting support"
+    }
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "breadcrumbs": {
+      "home": "Home",
+      "pages": "Pages",
+      "privacyPolicy": "Privacy Policy"
+    },
+    "seo": {
+      "title": "Privacy Policy - HK Precision",
+      "description": "HK Precision's customer information privacy policy. Commitment to protecting personal information and customer privacy.",
+      "ogTitle": "Privacy Policy - HK Precision",
+      "ogDescription": "Learn about HK Precision's privacy policy and commitment to protecting customer information"
+    },
+    "sections": {
+      "generalInfo": {
+        "title": "General Information",
+        "content": "Welcome to our Privacy Policy page! When you use our website services, you trust us with your information. This Privacy Policy is meant to help you understand what data we collect, why we collect it, and what we do with that data. When you share information with us, we can provide better services for you. This is important; we hope you will take the time to read it carefully."
+      },
+      "dataAccess": {
+        "title": "Data access, editing and deletion rights",
+        "content": "Our customers have the right to access, edit and delete personal data related to them, and object to the processing of that data, by submitting a written request at any time. The Company makes every effort to apply appropriate preventive measures to protect the security and privacy of personal data, and prevent alteration, damage, destruction or unauthorized access by third parties. However, the Company cannot control all risks related to Internet use, and therefore warns website users about potential risks related to Internet activities and use."
+      },
+      "dataManagement": {
+        "title": "Personal data management",
+        "content": "You can view or edit your personal data online for many of our services. You can also make choices about our data collection and use. How you can access or control your personal data will depend on which services you use. You can choose whether you want to receive promotional information from our website via email, SMS, mail and phone."
+      },
+      "dataCollection": {
+        "title": "Information we collect",
+        "content": "Our store collects data to operate effectively and provide you with the best experiences with our services. You provide some of this data directly, such as when you create a personal account. We get some by recording how you interact with our services by, for example, using technologies like cookies and receiving error reports or usage data from software running on your device."
+      },
+      "dataUsage": {
+        "title": "How we use your information",
+        "content": "Our website uses the data we collect for three basic purposes: operating our business and providing (including improving and personalizing) the services we offer, sending communications, including promotional communications, and displaying advertising. In fulfilling these purposes, we combine data we collect from the various website services you use to give you a more seamless, consistent and personalized experience."
+      },
+      "dataSharing": {
+        "title": "Sharing your information",
+        "content": "We share your personal data with your consent or as necessary to complete any transaction or provide any service you have requested or authorized. We also share personal data between our controlled affiliates and subsidiaries. We also share personal data with vendors or agents working on our behalf for the purposes described in this statement."
+      }
+    }
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "requestQuote": "Request Product Quote",
+    "faq": "Frequently Asked Questions",
+    "team": "Team",
+    "rights": "Copyright"
   }
 }

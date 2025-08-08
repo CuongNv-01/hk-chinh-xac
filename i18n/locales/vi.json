@@ -106,5 +106,213 @@
     "name": "HK Chính Xác",
     "fullName": "Công Nghệ Cơ Khí Chính Xác HK",
     "description": "Công ty Cơ Khí Chính Xác HK chuyên sản xuất khuôn nhựa, nhôm, dập, đồ giá, jig kiểm với độ chính xác cao."
+  },
+  "about": {
+    "pageTitle": "Về Chúng Tôi",
+    "title": "Công Nghệ Cơ Khí Chính Xác HK",
+    "subtitle": "Đối tác tin cậy trong lĩnh vực gia công cơ khí chính xác",
+    "description": "HK Chính Xác được thành lập năm 2015, chuyên sản xuất khuôn mẫu nhựa, khuôn nhôm, khuôn dập và các sản phẩm cơ khí chính xác. Với đội ngũ kỹ sư giàu kinh nghiệm và trang thiết bị hiện đại, chúng tôi cam kết mang đến sản phẩm chất lượng cao cho khách hàng.",
+    "seoDescription": "Tìm hiểu về Công ty HK Chính Xác - đơn vị hàng đầu trong lĩnh vực sản xuất khuôn mẫu và gia công cơ khí chính xác với công nghệ hiện đại và đội ngũ chuyên nghiệp.",
+    "ogDescription": "Công ty HK chuyên sản xuất khuôn mẫu và gia công cơ khí theo tiêu chuẩn với công nghệ hiện đại.",
+    "experienceTitle": "Nhiều năm kinh nghiệm",
+    "orientation": "Định hướng",
+    "goals": "Mục tiêu",
+    "orientationTitle": "Định hướng của chúng tôi",
+    "orientationContent": "Công ty định hướng trở thành đơn vị tiên phong trong lĩnh vực sản xuất, khuôn nhựa, không ngừng đổi mới sáng tạo, nâng cao chất lượng sản phẩm/dịch vụ và xây dựng giá trị bền vững cho khách hàng, cộng đồng và đội ngũ nhân sự.",
+    "goalsTitle": "Mục tiêu phát triển",
+    "goalsContent1": "Trở thành doanh nghiệp dẫn đầu về gia công cơ khí chính xác cao tại Việt Nam. Mở rộng thị trường xuất khẩu sang nước ngoài.",
+    "goalsContent2": "Đầu tư hệ thống máy móc thiết bị hiện đại, nâng cao chất lượng sản phẩm và dịch vụ. Xây dựng đội ngũ nhân sự chuyên nghiệp, sáng tạo và tận tâm với khách hàng.",
+    "companyIntroTitle": "Giới thiệu về Công ty HK",
+    "companyIntroContent": "Công ty HK là đơn vị hàng đầu trong lĩnh vực sản xuất khuôn mẫu và gia công cơ khí theo tiêu chuẩn. Chúng tôi chuyên sản xuất các loại mặt hàng gia dụng, sản phẩm cơ khí, các linh kiện, phụ tùng cho các ngành nghề ô tô, xe máy...",
+    "modernTechDescription": "Sử dụng máy CNC và hệ thống EDM Charmilles tiên tiến.",
+    "precisionEquipmentDescription": "Máy ép nhựa Sumitomo, thiết bị kiểm tra CMM Zeiss đảm bảo độ chính xác cao.",
+    "internationalStandardsTitle": "Tiêu chuẩn Quốc tế",
+    "internationalStandardsDescription": "Đạt chuẩn FUTABA, DME, HASCO - đảm bảo chất lượng sản phẩm tốt nhất.",
+    "mission": {
+      "title": "Sứ Mệnh",
+      "content": "Cung cấp giải pháp gia công cơ khí chính xác với chất lượng cao nhất, đáp ứng mọi nhu cầu của khách hàng trong và ngoài nước."
+    },
+    "vision": {
+      "title": "Tầm Nhìn",
+      "content": "Trở thành nhà cung cấp hàng đầu Việt Nam trong lĩnh vực sản xuất khuôn mẫu và gia công cơ khí chính xác."
+    },
+    "values": {
+      "title": "Giá Trị Cốt Lõi",
+      "quality": "Chất lượng là ưu tiên hàng đầu",
+      "innovation": "Không ngừng đổi mới và cải tiến",
+      "customer": "Khách hàng là trung tâm",
+      "integrity": "Uy tín và trách nhiệm"
+    },
+    "team": {
+      "title": "Đội Ngũ Của Chúng Tôi",
+      "description": "Với hơn 50 kỹ sư và công nhân lành nghề, HK Chính Xác tự hào về đội ngũ chuyên nghiệp và tận tâm."
+    }
+  },
+  "servicesPage": {
+    "pageTitle": "Dịch Vụ Của Chúng Tôi",
+    "title": "Dịch Vụ Chuyên Nghiệp",
+    "subtitle": "Giải pháp toàn diện cho mọi nhu cầu gia công cơ khí chính xác"
+  },
+  "galleryPage": {
+    "pageTitle": "Sản Phẩm & Dự Án",
+    "title": "Sản Phẩm Nổi Bật",
+    "subtitle": "Khám phá các sản phẩm và dự án tiêu biểu của chúng tôi"
+  },
+  "contactPage": {
+    "pageTitle": "Liên Hệ",
+    "title": "Liên Hệ Với Chúng Tôi",
+    "subtitle": "Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn",
+    "breadcrumbs": {
+      "home": "Trang chủ",
+      "pages": "Trang",
+      "contacts": "Liên hệ"
+    },
+    "form": {
+      "name": "Họ và tên",
+      "email": "Email",
+      "phone": "Số điện thoại",
+      "subject": "Chủ đề",
+      "message": "Nội dung tin nhắn",
+      "selectService": "Chọn dịch vụ",
+      "serviceOptions": {
+        "plasticMolds": "Khuôn mẫu nhựa",
+        "cncMachining": "Gia công CNC",
+        "plasticProducts": "Sản phẩm nhựa"
+      },
+      "send": "Gửi liên hệ",
+      "sending": "Đang gửi...",
+      "successMessage": "Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất.",
+      "errorMessage": "Có lỗi xảy ra. Vui lòng thử lại sau."
+    },
+    "info": {
+      "address": "Địa chỉ",
+      "phone": "Điện thoại",
+      "email": "Email",
+      "social": "Mạng xã hội",
+      "workingHours": "Giờ làm việc",
+      "workingTime": "Thứ 2 - Thứ 6: 8:00 - 17:00"
+    },
+    "seo": {
+      "title": "Liên hệ - HK Chính Xác",
+      "description": "Liên hệ với HK Chính Xác để được tư vấn về dịch vụ sản xuất khuôn mẫu, gia công CNC và sản phẩm nhựa chính xác. Hotline: 0982102088 | 0329809522",
+      "ogTitle": "Liên hệ - HK Chính Xác",
+      "ogDescription": "Liên hệ ngay để được tư vấn miễn phí về các dịch vụ gia công cơ khí chính xác"
+    }
+  },
+  "serviceDetail": {
+    "overview": "Tổng quan",
+    "features": "Đặc điểm",
+    "applications": "Ứng dụng",
+    "process": "Quy trình",
+    "getQuote": "Yêu cầu báo giá",
+    "relatedServices": "Dịch vụ liên quan",
+    "pageTitle": "Sản xuất khuôn mẫu",
+    "breadcrumbs": {
+      "home": "Trang chủ",
+      "pages": "Trang",
+      "service": "Sản xuất khuôn mẫu"
+    },
+    "companyTitle": "Công ty HK Chính Xác",
+    "companyDescription": "Công Ty HK là đơn vị hàng đầu trong lĩnh vực sản xuất khuôn mẫu và gia công cơ khí theo tiêu chuẩn. Chúng tôi chuyên sản xuất các loại mặt hàng gia dụng, sản phẩm cơ khí, các linh kiện, phụ tùng cho các ngành nghề ô tô, xe máy...",
+    "contactCall": "Liên hệ với chúng tôi để được tư vấn miễn phí!",
+    "accordion": {
+      "qualityCommitment": {
+        "title": "Cam kết chất lượng cao",
+        "content": "Tất cả sản phẩm của chúng tôi đều được kiểm tra chất lượng nghiêm ngặt trước khi giao cho khách hàng. Chúng tôi cam kết độ chính xác đạt tiêu chuẩn, đảm bảo sự hài lòng của khách hàng."
+      },
+      "professionalTeam": {
+        "title": "Đội ngũ chuyên nghiệp",
+        "content": "Đội ngũ kỹ sư và kỹ thuật viên của chúng tôi đều có trình độ cao và kinh nghiệm dày dặn trong lĩnh vực gia công chế tạo khuôn mẫu, đồ gia dụng, jigs."
+      },
+      "support247": {
+        "title": "Hỗ trợ 24/7",
+        "content": "Chúng tôi luôn sẵn sàng hỗ trợ khách hàng 24/7, kể cả trong quá trình sản xuất và sau khi bàn giao sản phẩm."
+      },
+      "modernEquipment": {
+        "title": "Thiết bị hiện đại",
+        "content": "Chúng tôi sở hữu hệ thống máy CNC hiện đại nhất, đảm bảo độ chính xác cao nhất cho mọi sản phẩm."
+      }
+    },
+    "sidebar": {
+      "servicesTitle": "Dịch vụ của chúng tôi",
+      "allServices": "Tất cả dịch vụ",
+      "moldManufacturing": "Sản xuất khuôn mẫu",
+      "cncMachining": "Gia công CNC",
+      "plasticProduction": "Sản xuất sản phẩm nhựa",
+      "moldDesign": "Thiết kế khuôn mẫu",
+      "maintenanceRepair": "Bảo trì và sửa chữa",
+      "technicalConsulting": "Tư vấn kỹ thuật",
+      "contactTitle": "Liên hệ chúng tôi",
+      "freeConsulting": "Tư vấn miễn phí",
+      "office": "Văn phòng",
+      "companyDocuments": "Tài liệu công ty",
+      "download": "Tải xuống"
+    },
+    "contactForm": {
+      "title": "Bạn có câu hỏi? Liên hệ chúng tôi",
+      "name": "Họ và tên",
+      "email": "Email",
+      "company": "Tên công ty",
+      "phone": "Số điện thoại",
+      "message": "Nội dung",
+      "submit": "Gửi yêu cầu",
+      "submitting": "Đang gửi...",
+      "successMessage": "Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất.",
+      "errorMessage": "Có lỗi xảy ra. Vui lòng thử lại sau."
+    },
+    "seo": {
+      "title": "Sản xuất khuôn mẫu - HK Chính Xác",
+      "description": "Dịch vụ sản xuất khuôn mẫu chuyên nghiệp của HK Chính Xác với công nghệ hiện đại, đội ngũ chuyên gia giàu kinh nghiệm và cam kết chất lượng cao nhất.",
+      "ogTitle": "Sản xuất khuôn mẫu - HK Chính Xác",
+      "ogDescription": "Chuyên sản xuất khuôn mẫu nhựa, khuôn đúc với độ chính xác cao và hỗ trợ tư vấn kỹ thuật chuyên nghiệp"
+    }
+  },
+  "privacyPage": {
+    "title": "Chính sách bảo mật",
+    "breadcrumbs": {
+      "home": "Home",
+      "pages": "Pages",
+      "privacyPolicy": "Privacy Policy"
+    },
+    "seo": {
+      "title": "Chính sách bảo mật - HK Chính Xác",
+      "description": "Chính sách bảo mật thông tin khách hàng của HK Chính Xác. Cam kết bảo vệ thông tin cá nhân và quyền riêng tư của khách hàng.",
+      "ogTitle": "Chính sách bảo mật - HK Chính Xác",
+      "ogDescription": "Tìm hiểu về chính sách bảo mật và cam kết bảo vệ thông tin khách hàng của HK Chính Xác"
+    },
+    "sections": {
+      "generalInfo": {
+        "title": "Thông tin chung",
+        "content": "Chào mừng bạn đến với trang Chính sách bảo mật của chúng tôi! Khi bạn sử dụng dịch vụ trang web của chúng tôi, bạn tin tưởng chúng tôi với thông tin của mình. Chính sách bảo mật này nhằm giúp bạn hiểu dữ liệu nào chúng tôi thu thập, tại sao chúng tôi thu thập và chúng tôi làm gì với dữ liệu đó. Khi bạn chia sẻ thông tin với chúng tôi, chúng tôi có thể cung cấp dịch vụ tốt hơn cho bạn. Điều này rất quan trọng; chúng tôi hy vọng bạn sẽ dành thời gian đọc kỹ."
+      },
+      "dataAccess": {
+        "title": "Quyền truy cập, chỉnh sửa và xóa dữ liệu",
+        "content": "Khách hàng của chúng tôi có quyền truy cập, chỉnh sửa và xóa dữ liệu cá nhân liên quan đến họ, và phản đối việc xử lý dữ liệu đó, bằng cách gửi yêu cầu bằng văn bản, bất kỳ lúc nào. Công ty nỗ lực hết mình để áp dụng các biện pháp phòng ngừa phù hợp để bảo vệ an ninh và quyền riêng tư của dữ liệu cá nhân, và ngăn chặn việc thay đổi, hỏng hóc, hủy hoại hoặc truy cập trái phép bởi bên thứ ba. Tuy nhiên, Công ty không kiểm soát được mọi rủi ro liên quan đến việc sử dụng Internet, và do đó cảnh báo người dùng trang web về các rủi ro tiềm ẩn liên quan đến hoạt động và sử dụng Internet."
+      },
+      "dataManagement": {
+        "title": "Quản lý dữ liệu cá nhân",
+        "content": "Bạn có thể xem hoặc chỉnh sửa dữ liệu cá nhân của mình trực tuyến cho nhiều dịch vụ của chúng tôi. Bạn cũng có thể đưa ra lựa chọn về việc thu thập và sử dụng dữ liệu của chúng tôi. Cách bạn có thể truy cập hoặc kiểm soát dữ liệu cá nhân của mình sẽ tùy thuộc vào dịch vụ bạn sử dụng. Bạn có thể chọn xem có muốn nhận thông tin khuyến mãi từ trang web của chúng tôi qua email, SMS, thư bưu điện và điện thoại hay không."
+      },
+      "dataCollection": {
+        "title": "Thông tin chúng tôi thu thập",
+        "content": "Cửa hàng của chúng tôi thu thập dữ liệu để hoạt động hiệu quả và cung cấp cho bạn những trải nghiệm tốt nhất với các dịch vụ của chúng tôi. Bạn cung cấp một số dữ liệu này trực tiếp, chẳng hạn như khi bạn tạo tài khoản cá nhân. Chúng tôi nhận được một số bằng cách ghi lại cách bạn tương tác với các dịch vụ của chúng tôi bằng cách, ví dụ, sử dụng các công nghệ như cookie và nhận báo cáo lỗi hoặc dữ liệu sử dụng từ phần mềm chạy trên thiết bị của bạn."
+      },
+      "dataUsage": {
+        "title": "Cách chúng tôi sử dụng thông tin của bạn",
+        "content": "Trang web của chúng tôi sử dụng dữ liệu chúng tôi thu thập cho ba mục đích cơ bản: vận hành doanh nghiệp của chúng tôi và cung cấp (bao gồm cải thiện và cá nhân hóa) các dịch vụ chúng tôi cung cấp, gửi thông tin liên lạc, bao gồm thông tin liên lạc khuyến mãi, và hiển thị quảng cáo. Trong việc thực hiện các mục đích này, chúng tôi kết hợp dữ liệu chúng tôi thu thập thông qua các dịch vụ trang web khác nhau mà bạn sử dụng để mang lại cho bạn trải nghiệm liền mạch, nhất quán và được cá nhân hóa hơn."
+      },
+      "dataSharing": {
+        "title": "Chia sẻ thông tin của bạn",
+        "content": "Chúng tôi chia sẻ dữ liệu cá nhân của bạn với sự đồng ý của bạn hoặc khi cần thiết để hoàn thành bất kỳ giao dịch nào hoặc cung cấp bất kỳ dịch vụ nào bạn đã yêu cầu hoặc ủy quyền. Chúng tôi cũng chia sẻ dữ liệu cá nhân giữa các chi nhánh và công ty con được kiểm soát của chúng tôi. Chúng tôi cũng chia sẻ dữ liệu cá nhân với các nhà cung cấp hoặc đại lý làm việc thay mặt chúng tôi cho các mục đích được mô tả trong tuyên bố này."
+      }
+    }
+  },
+  "footer": {
+    "quickLinks": "Liên kết nhanh",
+    "contactInfo": "Thông tin liên hệ",
+    "requestQuote": "Yêu cầu báo giá sản phẩm",
+    "faq": "Câu hỏi thường gặp",
+    "team": "Đội ngũ",
+    "rights": "Bản quyền"
   }
 }
