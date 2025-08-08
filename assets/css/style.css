@@ -6921,6 +6921,7 @@ p + .quote-classic {
 	padding: 10px 0;
 	margin-left: -17px;
 	margin-right: -17px;
+	display: none;
 }
 
 .breadcrumbs-custom-path > * {

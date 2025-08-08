@@ -76,7 +76,7 @@ export default defineNuxtConfig({
       }
     ],
     //     lazy: false,
-    langDir: 'locales/',
+    langDir: '../locales/',
     defaultLocale: 'vi',
     strategy: 'prefix_except_default',
     detectBrowserLanguage: {
