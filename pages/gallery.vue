@@ -89,16 +89,17 @@ const { t } = useI18n()
 // Use gallery composable for stable gallery functionality
 const { initGallery } = useGallery()
 
-useHead({
-  title: t('galleryPage.pageTitle') + ' - ' + t('company.name'),
+// SEO metadata with computed
+useHead(() => ({
+  title: `${t('galleryPage.pageTitle')} - ${t('company.name')}`,
   meta: [
-    { name: 'description', content: t('galleryPage.subtitle') + ' - ' + t('seo.description') },
-    { property: 'og:title', content: t('galleryPage.pageTitle') + ' - ' + t('company.name') },
-    { property: 'og:description', content: t('galleryPage.subtitle') + ' - ' + t('company.description') },
+    { name: 'description', content: `${t('galleryPage.subtitle')} - ${t('seo.description')}` },
+    { property: 'og:title', content: `${t('galleryPage.pageTitle')} - ${t('company.name')}` },
+    { property: 'og:description', content: `${t('galleryPage.subtitle')} - ${t('company.description')}` },
     { property: 'og:image', content: '/logo/banner.png' },
     { property: 'og:type', content: 'website' }
   ]
-})
+}))
 
 // Initialize gallery functionality
 onMounted(() => {

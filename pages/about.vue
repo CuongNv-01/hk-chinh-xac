@@ -114,14 +114,15 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-useHead({
-  title: () => `${t('about.pageTitle')} - ${t('company.name')}`,
+// SEO metadata with computed
+useHead(() => ({
+  title: `${t('about.pageTitle')} - ${t('company.name')}`,
   meta: [
-    { name: 'description', content: () => t('about.seoDescription') },
-    { property: 'og:title', content: () => `${t('about.pageTitle')} - ${t('company.name')}` },
-    { property: 'og:description', content: () => t('about.ogDescription') },
+    { name: 'description', content: t('about.seoDescription') },
+    { property: 'og:title', content: `${t('about.pageTitle')} - ${t('company.name')}` },
+    { property: 'og:description', content: t('about.ogDescription') },
     { property: 'og:image', content: '/logo/banner.png' },
     { property: 'og:type', content: 'website' }
   ]
-})
+}))
 </script>

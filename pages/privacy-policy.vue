@@ -64,14 +64,15 @@
 // Import i18n composable
 const { t } = useI18n()
 
-useHead({
-  title: () => t('privacyPage.seo.title'),
+// SEO metadata with computed
+useHead(() => ({
+  title: t('privacyPage.seo.title'),
   meta: [
-    { name: 'description', content: () => t('privacyPage.seo.description') },
-    { property: 'og:title', content: () => t('privacyPage.seo.ogTitle') },
-    { property: 'og:description', content: () => t('privacyPage.seo.ogDescription') },
+    { name: 'description', content: t('privacyPage.seo.description') },
+    { property: 'og:title', content: t('privacyPage.seo.ogTitle') },
+    { property: 'og:description', content: t('privacyPage.seo.ogDescription') },
     { property: 'og:image', content: '/logo/banner.png' },
     { property: 'og:type', content: 'website' }
   ]
-})
+}))
 </script>

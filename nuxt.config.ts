@@ -75,7 +75,7 @@ export default defineNuxtConfig({
         file: 'ja.json'
       }
     ],
-    lazy: true,
+    //     lazy: false,
     langDir: 'locales/',
     defaultLocale: 'vi',
     strategy: 'prefix_except_default',
