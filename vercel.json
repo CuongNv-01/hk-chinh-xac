@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd frontend && pnpm install && pnpm build",
+  "outputDirectory": "frontend/.output/public",
+  "installCommand": "cd frontend && pnpm install",
+  "framework": "nuxt"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "hk-landing",
+  "scripts": {
+    "build": "cd frontend && pnpm install && pnpm build",
+    "dev": "cd frontend && pnpm dev",
+    "preview": "cd frontend && pnpm preview"
+  }
+}
