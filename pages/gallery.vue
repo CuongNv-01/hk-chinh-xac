@@ -11,7 +11,7 @@
       </div>
       <div class="container">
         <ul class="breadcrumbs-custom-path">
-          <li><NuxtLink to="/">{{ t('common.home') }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/')">{{ t('common.home') }}</NuxtLink></li>
           <li><a href="#">Projects</a></li>
           <li class="active">{{ t('common.gallery') }}</li>
         </ul>
@@ -85,6 +85,7 @@ import { onMounted } from 'vue'
 
 // Use i18n composable
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 // Use gallery composable for stable gallery functionality
 const { initGallery } = useGallery()

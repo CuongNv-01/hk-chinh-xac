@@ -75,12 +75,17 @@ export default defineNuxtConfig({
         file: 'ja.json'
       }
     ],
-    //     lazy: false,
-    langDir: '../locales/',
+    langDir: '../locales',
     defaultLocale: 'vi',
-    strategy: 'prefix_except_default',
+    strategy: 'prefix_and_default',
+    types: 'composition',
+    debug: false,
+    experimental: {
+      typedPages: true,
+    },
     detectBrowserLanguage: {
       useCookie: true,
+      alwaysRedirect: true,
       cookieKey: 'i18n_redirected',
       redirectOn: 'root'
     }

@@ -11,7 +11,7 @@
       </div>
       <div class="container">
         <ul class="breadcrumbs-custom-path">
-          <li><NuxtLink to="/">{{ t('privacyPage.breadcrumbs.home') }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/')">{{ t('privacyPage.breadcrumbs.home') }}</NuxtLink></li>
           <li><a href="#">{{ t('privacyPage.breadcrumbs.pages') }}</a></li>
           <li class="active">{{ t('privacyPage.breadcrumbs.privacyPolicy') }}</li>
         </ul>
@@ -63,6 +63,7 @@
 <script setup lang="ts">
 // Import i18n composable
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 // SEO metadata with computed
 useHead(() => ({

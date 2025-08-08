@@ -11,8 +11,8 @@
       </div>
       <div class="container">
         <ul class="breadcrumbs-custom-path">
-          <li><NuxtLink to="/">{{ t('common.home') }}</NuxtLink></li>
-          <li><NuxtLink to="/about">{{ t('common.aboutUs') }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/')">{{ t('common.home') }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/about')">{{ t('common.aboutUs') }}</NuxtLink></li>
           <li class="active">{{ t('about.pageTitle') }}</li>
         </ul>
       </div>
@@ -35,7 +35,7 @@
                 <a href="#tabs-4-1" data-toggle="tab">{{ t('about.pageTitle') }}</a>
               </li>
             </ul>
-            <NuxtLink class="button button-lg button-primary button-winona" to="/contact">{{ t('common.contactUs') }}</NuxtLink>
+            <NuxtLink class="button button-lg button-primary button-winona" :to="localePath('/contact')">{{ t('common.contactUs') }}</NuxtLink>
           </div>
           <div class="col-lg-8 col-xl-9">
             <!-- Tab panes-->
@@ -73,7 +73,7 @@
                   <div class="box-icon-classic-icon linearicons-hammer-wrench"></div>
                 </div>
                 <div class="unit-body">
-                  <h5 class="box-icon-classic-title"><NuxtLink to="/service">{{ t('features.modernTech.title') }}</NuxtLink></h5>
+                  <h5 class="box-icon-classic-title"><NuxtLink :to="localePath('/service')">{{ t('features.modernTech.title') }}</NuxtLink></h5>
                   <p class="box-icon-classic-text">{{ t('about.modernTechDescription') }}</p>
                 </div>
               </div>
@@ -86,7 +86,7 @@
                   <div class="box-icon-classic-icon linearicons-apartment"></div>
                 </div>
                 <div class="unit-body">
-                  <h5 class="box-icon-classic-title"><NuxtLink to="/service">{{ t('features.precisionEquipment.title') }}</NuxtLink></h5>
+                  <h5 class="box-icon-classic-title"><NuxtLink :to="localePath('/service')">{{ t('features.precisionEquipment.title') }}</NuxtLink></h5>
                   <p class="box-icon-classic-text">{{ t('about.precisionEquipmentDescription') }}</p>
                 </div>
               </div>
@@ -99,7 +99,7 @@
                   <div class="box-icon-classic-icon linearicons-pencil-ruler"></div>
                 </div>
                 <div class="unit-body">
-                  <h5 class="box-icon-classic-title"><NuxtLink to="/service">{{ t('about.internationalStandardsTitle') }}</NuxtLink></h5>
+                  <h5 class="box-icon-classic-title"><NuxtLink :to="localePath('/service')">{{ t('about.internationalStandardsTitle') }}</NuxtLink></h5>
                   <p class="box-icon-classic-text">{{ t('about.internationalStandardsDescription') }}</p>
                 </div>
               </div>
@@ -113,6 +113,7 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 // SEO metadata with computed
 useHead(() => ({

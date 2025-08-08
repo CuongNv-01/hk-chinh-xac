@@ -11,7 +11,7 @@
       </div>
       <div class="container">
         <ul class="breadcrumbs-custom-path">
-          <li><NuxtLink to="/">{{ t('common.home') }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/')">{{ t('common.home') }}</NuxtLink></li>
           <li><a href="#">Pages</a></li>
           <li class="active">{{ t('common.services') }}</li>
         </ul>
@@ -25,10 +25,10 @@
           <div class="col-md-6 col-lg-5 col-xl-4" v-for="service in services" :key="service.id">
             <!-- Services Classic-->
             <article class="services-classic">
-              <img :src="service.image" 
-                   :alt="service.title" 
-                   width="370" 
-                   height="274" 
+              <img :src="service.image"
+                   :alt="service.title"
+                   width="370"
+                   height="274"
                    style="width: 370px; height: 274px; object-fit: cover;"/>
               <div class="services-classic-caption">
                 <div class="unit align-items-lg-center">
@@ -37,7 +37,7 @@
                   </div>
                   <div class="unit-body">
                     <h5 class="services-classic-title">
-                      <NuxtLink to="/service">{{ service.title }}</NuxtLink>
+                      <NuxtLink :to="localePath('/service?type=mold')">{{ service.title }}</NuxtLink>
                     </h5>
                     <p class="services-classic-text">{{ service.description }}</p>
                   </div>
@@ -54,6 +54,7 @@
 <script setup lang="ts">
 // i18n composable
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 useHead({
   title: computed(() => `${t('servicesPage.pageTitle')} - ${t('company.name')}`),

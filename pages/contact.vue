@@ -11,7 +11,7 @@
       </div>
       <div class="container">
         <ul class="breadcrumbs-custom-path">
-          <li><NuxtLink to="/">{{ t('contactPage.breadcrumbs.home') }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/')">{{ t('contactPage.breadcrumbs.home') }}</NuxtLink></li>
           <li><a href="#">{{ t('contactPage.breadcrumbs.pages') }}</a></li>
           <li class="active">{{ t('contactPage.breadcrumbs.contacts') }}</li>
         </ul>
@@ -143,6 +143,7 @@ import { ref } from 'vue'
 
 // Use i18n
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 // SEO metadata
 useHead(() => ({

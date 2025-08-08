@@ -11,7 +11,7 @@
       </div>
       <div class="container">
         <ul class="breadcrumbs-custom-path">
-          <li><NuxtLink to="/">{{ t('serviceDetail.breadcrumbs.home') }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('/')">{{ t('serviceDetail.breadcrumbs.home') }}</NuxtLink></li>
           <li><a href="#">{{ t('serviceDetail.breadcrumbs.pages') }}</a></li>
           <li class="active">{{ serviceContent.breadcrumb }}</li>
         </ul>
@@ -73,25 +73,25 @@
                   <h5 class="aside-services-title">{{ t('serviceDetail.sidebar.servicesTitle') }}</h5>
                   <ul class="list-category">
                     <li class="list-category-item">
-                      <NuxtLink :class="{ active: serviceType === 'moldManufacturing' }" to="/services">{{ t('serviceDetail.sidebar.allServices') }}</NuxtLink>
+                      <NuxtLink :class="{ active: serviceType === 'moldManufacturing' }" :to="localePath('/services')">{{ t('serviceDetail.sidebar.allServices') }}</NuxtLink>
                     </li>
                     <li class="list-category-item">
-                      <NuxtLink :class="{ active: serviceType === 'plasticMolds' }" to="/service?type=plasticMolds">{{ t('services.plasticMolds.title') }}</NuxtLink>
+                      <NuxtLink :class="{ active: serviceType === 'plasticMolds' }" :to="localePath('/service?type=plasticMolds')">{{ t('services.plasticMolds.title') }}</NuxtLink>
                     </li>
                     <li class="list-category-item">
-                      <NuxtLink :class="{ active: serviceType === 'cncMachining' }" to="/service?type=cncMachining">{{ t('services.cncMachining.title') }}</NuxtLink>
+                      <NuxtLink :class="{ active: serviceType === 'cncMachining' }" :to="localePath('/service?type=cncMachining')">{{ t('services.cncMachining.title') }}</NuxtLink>
                     </li>
                     <li class="list-category-item">
-                      <NuxtLink :class="{ active: serviceType === 'plasticProducts' }" to="/service?type=plasticProducts">{{ t('services.plasticProducts.title') }}</NuxtLink>
+                      <NuxtLink :class="{ active: serviceType === 'plasticProducts' }" :to="localePath('/service?type=plasticProducts')">{{ t('services.plasticProducts.title') }}</NuxtLink>
                     </li>
                     <li class="list-category-item">
-                      <NuxtLink :class="{ active: serviceType === 'technicalConsulting' }" to="/service?type=technicalConsulting">{{ t('services.technicalConsulting.title') }}</NuxtLink>
+                      <NuxtLink :class="{ active: serviceType === 'technicalConsulting' }" :to="localePath('/service?type=technicalConsulting')">{{ t('services.technicalConsulting.title') }}</NuxtLink>
                     </li>
                     <li class="list-category-item">
-                      <NuxtLink :class="{ active: serviceType === 'qualityControl' }" to="/service?type=qualityControl">{{ t('services.qualityControl.title') }}</NuxtLink>
+                      <NuxtLink :class="{ active: serviceType === 'qualityControl' }" :to="localePath('/service?type=qualityControl')">{{ t('services.qualityControl.title') }}</NuxtLink>
                     </li>
                     <li class="list-category-item">
-                      <NuxtLink :class="{ active: serviceType === 'warrantySupport' }" to="/service?type=warrantySupport">{{ t('services.warrantySupport.title') }}</NuxtLink>
+                      <NuxtLink :class="{ active: serviceType === 'warrantySupport' }" :to="localePath('/service?type=warrantySupport')">{{ t('services.warrantySupport.title') }}</NuxtLink>
                     </li>
                   </ul>
                 </div>
@@ -130,7 +130,7 @@
                 </div>
                 <div class="aside-item col-sm-6 col-md-12">
                   <h5 class="aside-services-title">{{ t('serviceDetail.sidebar.companyDocuments') }}</h5>
-                  <NuxtLink class="button button-lg button-icon button-icon-left button-primary button-winona" to="/contact">
+                  <NuxtLink class="button button-lg button-icon button-icon-left button-primary button-winona" :to="localePath('/contact')">
                     <span class="icon mdi mdi-download"></span>
                     <span>{{ t('serviceDetail.sidebar.download') }}</span>
                   </NuxtLink>
@@ -221,6 +221,7 @@ import { ref } from 'vue'
 // i18n
 const { t } = useI18n()
 const route = useRoute()
+const localePath = useLocalePath()
 
 // Get service type from query parameter or default to 'moldManufacturing'
 const serviceType = computed(() => route.query.type || 'moldManufacturing')
