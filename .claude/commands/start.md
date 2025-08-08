@@ -1,0 +1,1 @@
+Read Serena's initial instructions to access indexed code context and available tools from the serena-mcp-server running in the current project.

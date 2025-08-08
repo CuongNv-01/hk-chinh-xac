@@ -1,6 +1,5 @@
 <template>
   <div>
-    <StructuredData />
     <!-- Hero Banner-->
     <section class="section context-dark"
              style="background-image: url('/logo/banner.png');
@@ -14,14 +13,14 @@
         <div class="row">
           <div class="col-sm-8 col-md-7 col-lg-6 offset-lg-1 offset-xxl-0 text-left" style="color: #2980B9; padding-left: 40px;">
             <h3 class="oh hero-title wow fadeInUp">
-              <span class="d-inline-block" style="font-weight: 900; color: #2980B9">Công Nghệ Cơ Khí Chính Xác HK</span>
+              <span class="d-inline-block" style="font-weight: 900; color: #2980B9">{{ t('homepage.heroTitle') }}</span>
             </h3>
             <h5 class="hero-subtitle wow fadeInLeft" data-wow-delay="0.3s" style="color: #000">
-              Chuyên sản xuất khuôn nhựa, nhôm, dập, đồ giá, jig kiểm với độ chính xác cao
+              {{ t('homepage.heroSubtitle') }}
             </h5>
             <a class="button button-lg button-primary button-winona button-shadow-2 wow fadeInUp"
                href="#"
-               data-wow-delay="0.5s">Tìm hiểu thêm</a>
+               data-wow-delay="0.5s">{{ t('common.learnMore') }}</a>
           </div>
         </div>
       </div>
@@ -51,14 +50,14 @@
     <!-- Featured Equipment Section -->
     <section class="section section-lg section-equipment">
       <div class="container">
-        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Trang Thiết Bị</span></h3>
+        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">{{ t('homepage.equipmentTitle') }}</span></h3>
         <div class="row row-50 align-items-center">
           <div class="col-lg-12">
             <div class="featured-equipment-media wow fadeInLeft">
               <div class="video-wrapper">
                 <video class="featured-video" poster="/images/internal/b14.jpeg" controls preload="metadata">
                   <source src="/images/internal/b16-video.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
+                  {{ t('homepage.videoNotSupported') }}
                 </video>
               </div>
             </div>
@@ -70,7 +69,7 @@
     <!-- What we offer-->
     <section class="section section-lg bg-default hidden">
       <div class="container">
-        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Sản phẩm & Dịch vụ</span></h3>
+        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">{{ t('homepage.productsServicesTitle') }}</span></h3>
         <div class="services-carousel-wrapper">
           <div class="swiper services-carousel">
             <div class="swiper-wrapper">
@@ -100,19 +99,19 @@
     <!-- Product Gallery with Filters-->
     <section class="section section-lg bg-default isotope-wrap">
       <div class="container">
-        <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">Sản Phẩm Gia Công</span></h3>
+        <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">{{ t('homepage.productsTitle') }}</span></h3>
         <div class="isotope-filters isotope-filters-horizontal" style="margin-top: 40px;">
           <button class="isotope-filters-toggle button button-sm button-icon button-icon-right button-gray-3"
                   data-custom-toggle=".isotope-filters-list"
                   data-custom-toggle-disable-on-blur="true">
-            <span class="icon mdi mdi-chevron-down"></span>Filter
+            <span class="icon mdi mdi-chevron-down"></span>{{ t('common.filter') }}
           </button>
           <ul class="isotope-filters-list">
-            <li><a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">Tất Cả</a></li>
-            <li><a href="#" data-isotope-filter="nhua" data-isotope-group="gallery">Sản Phẩm Nhựa</a></li>
-            <li><a href="#" data-isotope-filter="nhom" data-isotope-group="gallery">Sản Phẩm Nhôm</a></li>
-            <li><a href="#" data-isotope-filter="may" data-isotope-group="gallery">Thiết Bị & Máy Móc</a></li>
-            <li><a href="#" data-isotope-filter="khac" data-isotope-group="gallery">Khác</a></li>
+            <li><a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">{{ t('common.all') }}</a></li>
+            <li><a href="#" data-isotope-filter="nhua" data-isotope-group="gallery">{{ t('gallery.categories.plasticProducts') }}</a></li>
+            <li><a href="#" data-isotope-filter="nhom" data-isotope-group="gallery">{{ t('gallery.categories.aluminumProducts') }}</a></li>
+            <li><a href="#" data-isotope-filter="may" data-isotope-group="gallery">{{ t('gallery.categories.machinery') }}</a></li>
+            <li><a href="#" data-isotope-filter="khac" data-isotope-group="gallery">{{ t('gallery.categories.others') }}</a></li>
           </ul>
         </div>
       </div>
@@ -126,7 +125,7 @@
           <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="nhua" v-for="i in 5" :key="`nhua-${i}`">
             <article class="thumbnail thumbnail-modern">
               <a class="thumbnail-modern-figure" :href="`/images/internal/nhua-${i}.jpeg`" data-lightgallery="item">
-                <img :src="`/images/internal/nhua-${i}.jpeg`" :alt="`Sản phẩm nhựa ${i} - HK Chính Xác`" width="474" height="355" loading="lazy"/>
+                <img :src="`/images/internal/nhua-${i}.jpeg`" :alt="t('gallery.altTexts.plasticProduct', { number: i })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>
@@ -134,7 +133,7 @@
           <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="nhom" v-for="i in 6" :key="`nhom-${i}`">
             <article class="thumbnail thumbnail-modern">
               <a class="thumbnail-modern-figure" :href="`/images/internal/nhom-${i}.jpeg`" data-lightgallery="item">
-                <img :src="`/images/internal/nhom-${i}.jpeg`" :alt="`Sản phẩm nhôm ${i} - HK Chính Xác`" width="474" height="355" loading="lazy"/>
+                <img :src="`/images/internal/nhom-${i}.jpeg`" :alt="t('gallery.altTexts.aluminumProduct', { number: i })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>
@@ -142,7 +141,7 @@
           <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="may" v-for="item in ['may-1', 'may-ep-nhua', 'may-thoi', 'may-thoi-2']" :key="item">
             <article class="thumbnail thumbnail-modern">
               <a class="thumbnail-modern-figure" :href="`/images/internal/${item}.jpeg`" data-lightgallery="item">
-                <img :src="`/images/internal/${item}.jpeg`" :alt="`Máy móc thiết bị ${item} - HK Chính Xác`" width="474" height="355" loading="lazy"/>
+                <img :src="`/images/internal/${item}.jpeg`" :alt="t('gallery.altTexts.machinery', { item })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>
@@ -150,7 +149,7 @@
           <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="khac" v-for="i in [7, 9, 10, 11, 12, 13, 14, 18, 19]" :key="`other-${i}`">
             <article class="thumbnail thumbnail-modern">
               <a class="thumbnail-modern-figure" :href="`/images/internal/b${i}.${i === 18 ? 'png' : 'jpeg'}`" data-lightgallery="item">
-                <img :src="`/images/internal/b${i}.${i === 18 ? 'png' : 'jpeg'}`" :alt="`Sản phẩm gia công ${i} - HK Chính Xác`" width="474" height="355" loading="lazy"/>
+                <img :src="`/images/internal/b${i}.${i === 18 ? 'png' : 'jpeg'}`" :alt="t('gallery.altTexts.product', { number: i })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>
@@ -187,20 +186,20 @@
               <div class="tab-content">
                 <div class="tab-pane fade show active" id="tabs-9-1">
                   <div class="post-amy-figure">
-                    <img src="/images/internal/b10.jpeg" alt="Tin tức HK Chính Xác - Chứng nhận ISO 9001:2015" width="570" height="505" loading="lazy"/>
+                    <img src="/images/internal/b10.jpeg" :alt="t('news.altText.iso')" width="570" height="505" loading="lazy"/>
                     <a href="#"><span class="icon linearicons-link2"></span></a>
                   </div>
                 </div>
                 <div class="tab-pane fade" id="tabs-9-2">
                   <div class="post-amy-figure">
-                    <img src="/images/internal/b11.jpeg" alt="Tin tức HK Chính Xác - Khuôn mẫu nhựa tiêu chuẩn FUTABA" width="570" height="505" loading="lazy"/>
+                    <img src="/images/internal/b11.jpeg" :alt="t('news.altText.futaba')" width="570" height="505" loading="lazy"/>
                     <a href="#"><span class="icon linearicons-link2"></span></a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-md-6 index-1">
-              <h3 class="tabs-post-title oh-desktop"><span class="d-inline-block wow slideInDown">Tin tức mới nhất</span></h3>
+              <h3 class="tabs-post-title oh-desktop"><span class="d-inline-block wow slideInDown">{{ t('homepage.latestNewsTitle') }}</span></h3>
               <ul class="nav nav-tabs">
                 <li class="nav-item wow fadeInRight" role="presentation" v-for="(news, index) in latestNews" :key="news.id">
                   <a class="nav-link" :class="{ active: index === 0 }" :href="`#tabs-9-${index + 1}`" data-toggle="tab"></a>
@@ -235,40 +234,43 @@ const { initGallery } = useGallery()
 // Use services carousel composable for stable services carousel
 const { initServicesCarousel } = useServicesCarousel()
 
-// Comprehensive SEO metadata
-const seoData = {
-  title: 'HK Chính Xác - Công Nghệ Cơ Khí Chính Xác | Khuôn Nhựa & Gia Công CNC',
-  description: 'Công ty Cơ Khí Chính Xác HK chuyên sản xuất khuôn nhựa, nhôm, dập, đồ giá, jig kiểm với độ chính xác cao. Gia công CNC HITACHI, OKUMA, EDM Charmilles. Sản xuất linh kiện nhựa công nghiệp, y tế, gia dụng chất lượng cao tại Việt Nam.',
-  keywords: 'khuôn nhựa, gia công CNC, khuôn dập, jig kiểm, máy CNC HITACHI, OKUMA, EDM Charmilles, sản phẩm nhựa công nghiệp, cơ khí chính xác, HK Chính Xác',
-  image: '/logo/banner.png',
-  url: 'https://hkchinhxac.com'
-}
+// Get i18n composable
+const { t, locale } = useI18n()
 
-useHead({
-  title: seoData.title,
+// Comprehensive SEO metadata
+const seoData = computed(() => ({
+  title: t('seo.title'),
+  description: t('seo.description'),
+  keywords: t('seo.keywords'),
+  image: '/logo/banner.png',
+  url: 'https://cokhihk.com'
+}))
+
+useHead(() => ({
+  title: seoData.value.title,
   meta: [
     // Basic SEO
-    { name: 'description', content: seoData.description },
-    { name: 'keywords', content: seoData.keywords },
-    { name: 'author', content: 'HK Chính Xác' },
+    { name: 'description', content: seoData.value.description },
+    { name: 'keywords', content: seoData.value.keywords },
+    { name: 'author', content: t('company.name') },
 
     // Open Graph / Facebook
     { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: seoData.title },
-    { property: 'og:description', content: seoData.description },
-    { property: 'og:image', content: seoData.image },
-    { property: 'og:url', content: seoData.url },
-    { property: 'og:site_name', content: 'HK Chính Xác' },
-    { property: 'og:locale', content: 'vi_VN' },
+    { property: 'og:title', content: seoData.value.title },
+    { property: 'og:description', content: seoData.value.description },
+    { property: 'og:image', content: seoData.value.image },
+    { property: 'og:url', content: seoData.value.url },
+    { property: 'og:site_name', content: t('company.name') },
+    { property: 'og:locale', content: locale.value === 'vi' ? 'vi_VN' : locale.value === 'en' ? 'en_US' : 'ja_JP' },
 
     // Twitter Card
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: seoData.title },
-    { name: 'twitter:description', content: seoData.description },
-    { name: 'twitter:image', content: seoData.image },
+    { name: 'twitter:title', content: seoData.value.title },
+    { name: 'twitter:description', content: seoData.value.description },
+    { name: 'twitter:image', content: seoData.value.image },
 
     // Additional SEO
-    { name: 'canonical', content: seoData.url },
+    { name: 'canonical', content: seoData.value.url },
     { name: 'robots', content: 'index, follow' },
     { name: 'googlebot', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
 
@@ -279,17 +281,17 @@ useHead({
     { name: 'ICBM', content: '10.762622, 106.660172' }
   ],
   link: [
-    { rel: 'canonical', href: seoData.url }
+    { rel: 'canonical', href: seoData.value.url }
   ]
-})
+}))
 
 // Structured Data for Local Business
-useSchemaOrg([
+useSchemaOrg(() => [
   defineOrganization({
-    name: 'HK Chính Xác',
-    url: 'https://hkchinhxac.com',
+    name: t('company.name'),
+    url: 'https://cokhihk.com',
     logo: '/logo/Logo_HK.svg',
-    description: 'Công ty Cơ Khí Chính Xác HK chuyên sản xuất khuôn nhựa, nhôm, dập, đồ giá, jig kiểm với độ chính xác cao.',
+    description: t('company.description'),
     address: {
       '@type': 'PostalAddress',
       streetAddress: '',
@@ -303,14 +305,14 @@ useSchemaOrg([
       telephone: '+84-xxx-xxx-xxx',
       contactType: 'customer service',
       areaServed: 'VN',
-      availableLanguage: 'Vietnamese'
+      availableLanguage: locale.value === 'vi' ? 'Vietnamese' : locale.value === 'en' ? 'English' : 'Japanese'
     },
     sameAs: []
   }),
   defineLocalBusiness({
-    name: 'HK Chính Xác',
-    description: 'Chuyên sản xuất khuôn nhựa, gia công CNC chính xác cao',
-    url: 'https://hkchinhxac.com',
+    name: t('company.name'),
+    description: t('company.description'),
+    url: 'https://cokhihk.com',
     telephone: '+84-xxx-xxx-xxx',
     address: {
       streetAddress: '',
@@ -327,20 +329,20 @@ useSchemaOrg([
     priceRange: '$$'
   }),
   defineWebSite({
-    name: 'HK Chính Xác',
-    url: 'https://hkchinhxac.com',
-    description: seoData.description,
+    name: t('company.name'),
+    url: 'https://cokhihk.com',
+    description: seoData.value.description,
     publisher: {
       '@type': 'Organization',
-      name: 'HK Chính Xác'
+      name: t('company.name')
     }
   }),
   defineWebPage({
     '@type': 'WebPage',
-    name: seoData.title,
-    url: seoData.url,
-    description: seoData.description,
-    primaryImageOfPage: seoData.image,
+    name: seoData.value.title,
+    url: seoData.value.url,
+    description: seoData.value.description,
+    primaryImageOfPage: seoData.value.image,
     datePublished: '2025-01-01',
     dateModified: new Date().toISOString()
   })
@@ -348,100 +350,100 @@ useSchemaOrg([
 
 // Removed Swiper config - using static banner instead
 
-const features = [
+const features = computed(() => [
   {
     id: 1,
     icon: 'linearicons-hammer-wrench',
-    title: 'Công nghệ Hiện đại',
-    description: 'Sử dụng máy CNC HITACHI và OKUMA và hệ thống EDM Charmilles tiên tiến.'
+    title: t('features.modernTech.title'),
+    description: t('features.modernTech.description')
   },
   {
     id: 2,
     icon: 'linearicons-apartment',
-    title: 'Thiết bị Chính xác',
-    description: 'Máy ép nhựa Sumitomo, Tosiba, thiết bị kiểm tra CMM đảm bảo độ chính xác cao.'
+    title: t('features.precisionEquipment.title'),
+    description: t('features.precisionEquipment.description')
   },
   {
     id: 3,
     icon: 'linearicons-coin-dollar',
-    title: 'Giá cả Cạnh tranh',
-    description: 'Cung cấp giải pháp tối ưu với chi phí hợp lý cho doanh nghiệp.'
+    title: t('features.competitivePrice.title'),
+    description: t('features.competitivePrice.description')
   },
   {
     id: 4,
     icon: 'linearicons-users2',
-    title: 'Đội ngũ Chuyên nghiệp',
-    description: 'Kỹ thuật viên giàu kinh nghiệm trong lĩnh vực gia công cơ khí chính xác.'
+    title: t('features.professionalTeam.title'),
+    description: t('features.professionalTeam.description')
   },
   {
     id: 5,
     icon: 'linearicons-headset',
-    title: 'Hỗ trợ Tận tình',
-    description: 'Tư vấn kỹ thuật chuyên sâu và hỗ trợ khách hàng nhanh chóng.'
+    title: t('features.dedicatedSupport.title'),
+    description: t('features.dedicatedSupport.description')
   }
-]
+])
 
-const services = [
+const services = computed(() => [
   {
     id: 1,
     image: '/images/internal/nhua-1.jpeg',
-    title: 'Khuôn mẫu nhựa',
-    description: 'Thiết kế và chế tạo khuôn ép nhựa cho ô tô, điện tử, gia dụng.'
+    title: t('services.plasticMolds.title'),
+    description: t('services.plasticMolds.description')
   },
   {
     id: 2,
     image: '/images/internal/b11.jpeg',
-    title: 'Gia công CNC',
-    description: 'Gia công chính xác cao với máy CNC hiện đại.'
+    title: t('services.cncMachining.title'),
+    description: t('services.cncMachining.description')
   },
   {
     id: 3,
     image: '/images/internal/nhua-4.jpeg',
-    title: 'Sản phẩm nhựa',
-    description: 'Sản xuất linh kiện nhựa công nghiệp, y tế, gia dụng chất lượng cao.'
+    title: t('services.plasticProducts.title'),
+    description: t('services.plasticProducts.description')
   },
   {
     id: 4,
     image: '/images/internal/b10.jpeg',
-    title: 'Tư vấn kỹ thuật',
-    description: 'Tư vấn thiết kế, giải pháp kỹ thuật cho sản xuất khuôn mẫu.'
+    title: t('services.technicalConsulting.title'),
+    description: t('services.technicalConsulting.description')
   },
   {
     id: 5,
     image: '/images/internal/b5.jpeg',
-    title: 'Kiểm tra chất lượng',
-    description: 'Kiểm tra nghiêm ngặt với thiết bị CMM đảm bảo độ chính xác.'
+    title: t('services.qualityControl.title'),
+    description: t('services.qualityControl.description')
   },
   {
     id: 6,
     image: '/images/internal/b6.jpeg',
-    title: 'Bảo hành & Hỗ trợ',
-    description: 'Dịch vụ bảo hành, sửa chữa khuôn mẫu và hỗ trợ kỹ thuật sau bán hàng.'
+    title: t('services.warrantySupport.title'),
+    description: t('services.warrantySupport.description')
   }
-]
+])
 
-const statistics = [
-  { id: 1, value: 50, symbol: '+', title: 'Khách hàng' },
-  { id: 2, value: 100, symbol: '%', title: 'Đảm bảo chất lượng' },
-  { id: 3, value: 3, symbol: '', title: 'Tiêu chuẩn quốc tế' }
-]
+const statistics = computed(() => [
+  { id: 1, value: 50, symbol: '+', title: t('statistics.customers') },
+  { id: 2, value: 100, symbol: '%', title: t('statistics.qualityGuarantee') },
+  { id: 3, value: 3, symbol: '', title: t('statistics.internationalStandards') }
+])
 
-const latestNews = [
+const latestNews = computed(() => [
   {
     id: 1,
-    title: 'HK Chính Xác đạt chứng nhận ISO 9001:2015',
+    title: t('news.isoTitle'),
     dateTime: '2025-01-15',
     date: '15/01/2025',
-    author: 'Admin HK'
+    author: t('news.author')
   },
   {
     id: 2,
-    title: 'Ra mắt dòng khuôn mẫu nhựa tiêu chuẩn FUTABA mới',
+    title: t('news.newProductTitle'),
     dateTime: '2025-01-15',
     date: '15/01/2025',
-    author: 'Admin HK'
+    author: t('news.author')
   }
-]
+])
 
 // Plugin handles initialization now
 onMounted(() => {

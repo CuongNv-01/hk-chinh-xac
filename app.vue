@@ -3,32 +3,32 @@
     <NuxtPage :transition="{
       name: 'page',
       mode: 'out-in',
-      onBeforeEnter: onBeforeEnter,
-      onAfterEnter: onAfterEnter
+      // onBeforeEnter: onBeforeEnter,
+      // onAfterEnter: onAfterEnter
     }" />
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-const onBeforeEnter = () => {
-  // Clean up before new page enters
-  if (typeof window !== 'undefined' && (window as any).$) {
-    const $ = (window as any).$
-    // Ensure footer is properly positioned
-    $('.section-footer').css('position', 'relative')
-  }
-}
+// const onBeforeEnter = () => {
+//   // Clean up before new page enters
+//   if (typeof window !== 'undefined' && (window as any).$) {
+//     const $ = (window as any).$
+//     // Ensure footer is properly positioned
+//     $('.section-footer').css('position', 'relative')
+//   }
+// }
 
-const onAfterEnter = () => {
-  // Fix layout after transition
-  if (typeof window !== 'undefined' && (window as any).$) {
-    const $ = (window as any).$
-    setTimeout(() => {
-      $('.section-footer').css('position', '')
-      $(window).trigger('resize')
-    }, 100)
-  }
-}
+// const onAfterEnter = () => {
+//   // Fix layout after transition
+//   if (typeof window !== 'undefined' && (window as any).$) {
+//     const $ = (window as any).$
+//     setTimeout(() => {
+//       $('.section-footer').css('position', '')
+//       $(window).trigger('resize')
+//     }, 100)
+//   }
+// }
 </script>
 
 <style>

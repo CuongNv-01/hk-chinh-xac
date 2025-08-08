@@ -33,7 +33,7 @@
                 <li>
                   <div class="unit unit-spacing-xs">
                     <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                    <div class="unit-body"><a class="address" href="#">21, Huu Cuoc, O Dien, Ha Noi City</a></div>
+                    <div class="unit-body"><a class="address" href="#">{{ t('company.address') }}</a></div>
                   </div>
                 </li>
               </ul>
@@ -52,8 +52,8 @@
               <button class="rd-navbar-toggle toggle-original" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
               <!-- RD Navbar Brand-->
               <div class="rd-navbar-brand">
-                <NuxtLink class="brand" to="/">
-                  <img class="brand-logo-dark" src="/logo/Logo_HK.svg" alt="HK Chính Xác" width="219" height="39"/>
+                <NuxtLink class="brand" :to="localePath('/')">
+                  <img class="brand-logo-dark" src="/logo/Logo_HK.svg" :alt="t('company.name')" width="219" height="39"/>
                 </NuxtLink>
               </div>
             </div>
@@ -70,7 +70,7 @@
                     <li>
                       <div class="unit unit-spacing-xs">
                         <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                        <div class="unit-body"><a class="address" href="#">21, Huu Cuoc, O Dien, Ha Noi City</a></div>
+                        <div class="unit-body"><a class="address" href="#">{{ t('company.address') }}</a></div>
                       </div>
                     </li>
                   </ul>
@@ -85,34 +85,38 @@
               <div class="rd-navbar-main">
                 <!-- RD Navbar Nav-->
                 <ul class="rd-navbar-nav">
-                  <li class="rd-nav-item" :class="{ active: $route.path === '/' }">
-                    <NuxtLink class="rd-nav-link" to="/">Trang chủ</NuxtLink>
+                  <li class="rd-nav-item" :class="{ active: isCurrentRoute('/') }">
+                    <NuxtLink class="rd-nav-link" :to="localePath('/')">{{ t('common.home') }}</NuxtLink>
                   </li>
-                  <li class="rd-nav-item" :class="{ active: $route.path === '/about' }">
-                    <NuxtLink class="rd-nav-link" to="/about">Về chúng tôi</NuxtLink>
+                  <li class="rd-nav-item" :class="{ active: isCurrentRoute('/about') }">
+                    <NuxtLink class="rd-nav-link" :to="localePath('/about')">{{ t('common.aboutUs') }}</NuxtLink>
                   </li>
-                  <li class="rd-nav-item" :class="{ active: $route.path === '/services' }">
-                    <NuxtLink class="rd-nav-link" to="/services">Dịch vụ</NuxtLink>
+                  <li class="rd-nav-item" :class="{ active: isCurrentRoute('/services') }">
+                    <NuxtLink class="rd-nav-link" :to="localePath('/services')">{{ t('common.services') }}</NuxtLink>
                     <!-- RD Navbar Dropdown-->
                     <ul class="rd-menu rd-navbar-dropdown">
                       <li class="rd-dropdown-item">
-                        <NuxtLink class="rd-dropdown-link" to="/service?type=mold">Sản xuất khuôn mẫu</NuxtLink>
+                        <NuxtLink class="rd-dropdown-link" :to="localePath('/service?type=mold')">{{ t('services.plasticMolds.title') }}</NuxtLink>
                       </li>
                       <li class="rd-dropdown-item">
-                        <NuxtLink class="rd-dropdown-link" to="/service?type=cnc">Gia công CNC</NuxtLink>
+                        <NuxtLink class="rd-dropdown-link" :to="localePath('/service?type=cnc')">{{ t('services.cncMachining.title') }}</NuxtLink>
                       </li>
                       <li class="rd-dropdown-item">
-                        <NuxtLink class="rd-dropdown-link" to="/service?type=plastic">Sản xuất sản phẩm nhựa</NuxtLink>
+                        <NuxtLink class="rd-dropdown-link" :to="localePath('/service?type=plastic')">{{ t('services.plasticProducts.title') }}</NuxtLink>
                       </li>
                     </ul>
                   </li>
-                  <li class="rd-nav-item" :class="{ active: $route.path === '/gallery' }">
-                    <NuxtLink class="rd-nav-link" to="/gallery">Sản phẩm</NuxtLink>
+                  <li class="rd-nav-item" :class="{ active: isCurrentRoute('/gallery') }">
+                    <NuxtLink class="rd-nav-link" :to="localePath('/gallery')">{{ t('common.gallery') }}</NuxtLink>
                   </li>
-                  <li class="rd-nav-item" :class="{ active: $route.path === '/contact' }">
-                    <NuxtLink class="rd-nav-link" to="/contact">Liên hệ</NuxtLink>
+                  <li class="rd-nav-item" :class="{ active: isCurrentRoute('/contact') }">
+                    <NuxtLink class="rd-nav-link" :to="localePath('/contact')">{{ t('common.contact') }}</NuxtLink>
                   </li>
                 </ul>
+                <!-- Language Switcher -->
+                <div class="rd-navbar-language ml-3">
+                  <LanguageSwitcher />
+                </div>
               </div>
             </div>
             <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-open rd-navbar-fixed-element-1"
@@ -163,6 +167,18 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
+
+const { t } = useI18n()
+const localePath = useLocalePath()
+const route = useRoute()
+
+// Check if current route matches the given path
+const isCurrentRoute = (path: string) => {
+  const currentPath = route.path
+  // Remove language prefix for comparison
+  const cleanPath = currentPath.replace(/^\/[a-z]{2}/, '')
+  return cleanPath === path || (path === '/' && cleanPath === '')
+}
 
 onMounted(() => {
   // Initialize RD Navbar after scripts are loaded

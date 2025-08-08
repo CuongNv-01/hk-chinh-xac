@@ -9,7 +9,8 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@nuxtjs/seo'
+    '@nuxtjs/seo',
+    '@nuxtjs/i18n'
   ],
 
   app: {
@@ -39,11 +40,11 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/logo/Logo_HK.svg' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/logo/Logo_HK.svg' },
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/logo/Logo_HK.svg' },
-        { rel: 'canonical', href: 'https://hkchinhxac.com' },
+        { rel: 'canonical', href: 'https://cokhihk.com' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600,700,900%7CRaleway:500&display=swap' }
       ],
       script: [
-        { src: '/js/core.min.js' },
+        // Core scripts will be loaded via plugin to ensure jQuery is available
         { src: '/js/init.js', defer: true }
       ]
     }
@@ -55,9 +56,39 @@ export default defineNuxtConfig({
     './assets/css/style.css'
   ],
 
+  // i18n Configuration
+  i18n: {
+    locales: [
+      {
+        code: 'vi',
+        name: 'Tiếng Việt',
+        file: 'vi.json'
+      },
+      {
+        code: 'en',
+        name: 'English',
+        file: 'en.json'
+      },
+      {
+        code: 'ja',
+        name: '日本語',
+        file: 'ja.json'
+      }
+    ],
+    lazy: true,
+    langDir: 'locales/',
+    defaultLocale: 'vi',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    }
+  },
+
   // SEO Configuration
   site: {
-    url: 'https://hkchinhxac.com',
+    url: 'https://cokhihk.com',
     name: 'HK Chính Xác',
     description: 'Công ty Cơ Khí Chính Xác HK chuyên sản xuất khuôn nhựa, nhôm, dập, đồ giá, jig kiểm với độ chính xác cao. Gia công CNC và sản xuất sản phẩm nhựa công nghiệp tại Việt Nam.',
     defaultLocale: 'vi'
@@ -65,7 +96,7 @@ export default defineNuxtConfig({
 
   // Sitemap Configuration
   sitemap: {
-    hostname: 'https://hkchinhxac.com',
+    hostname: 'https://cokhihk.com',
     gzip: true,
     routes: [
       {
@@ -118,14 +149,14 @@ export default defineNuxtConfig({
           '/api/',
           '/.well-known/'
         ],
-        Sitemap: 'https://hkchinhxac.com/sitemap.xml'
+        Sitemap: 'https://cokhihk.com/sitemap.xml'
       },
       {
         UserAgent: 'Googlebot',
         Allow: '/'
       },
       {
-        UserAgent: 'Bingbot', 
+        UserAgent: 'Bingbot',
         Allow: '/'
       },
       {
@@ -141,7 +172,7 @@ export default defineNuxtConfig({
         Disallow: '/'
       }
     ],
-    sitemap: 'https://hkchinhxac.com/sitemap.xml'
+    sitemap: 'https://cokhihk.com/sitemap.xml'
   },
 
   nitro: {
@@ -153,7 +184,23 @@ export default defineNuxtConfig({
         '/privacy-policy',
         '/gallery',
         '/services',
-        '/service'
+        '/service',
+        // English routes
+        '/en',
+        '/en/about',
+        '/en/contact',
+        '/en/privacy-policy',
+        '/en/gallery',
+        '/en/services',
+        '/en/service',
+        // Japanese routes
+        '/ja',
+        '/ja/about',
+        '/ja/contact',
+        '/ja/privacy-policy',
+        '/ja/gallery',
+        '/ja/services',
+        '/ja/service'
       ]
     }
   },

@@ -1,20 +1,21 @@
 export const useSEO = () => {
   const route = useRoute()
-  
+  const { t, locale } = useI18n()
+
   // Organization structured data
-  const organizationSchema = {
+  const organizationSchema = computed(() => ({
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'HK Chính Xác',
-    alternateName: 'Công Nghệ Cơ Khí Chính Xác HK',
-    url: 'https://hkchinhxac.com',
-    logo: 'https://hkchinhxac.com/logo/Logo_HK.svg',
+    name: t('company.name'),
+    alternateName: t('company.fullName'),
+    url: 'https://cokhihk.com',
+    logo: 'https://cokhihk.com/logo/Logo_HK.svg',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+84-982-102-088',
       contactType: 'customer service',
       areaServed: 'VN',
-      availableLanguage: 'Vietnamese'
+      availableLanguage: locale.value === 'vi' ? 'Vietnamese' : locale.value === 'en' ? 'English' : 'Japanese'
     },
     address: {
       '@type': 'PostalAddress',
@@ -26,17 +27,17 @@ export const useSEO = () => {
       'https://www.facebook.com/hkchinhxac',
       'https://twitter.com/hkchinhxac'
     ]
-  }
+  }))
 
   // Local Business structured data
-  const localBusinessSchema = {
+  const localBusinessSchema = computed(() => ({
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'HK Chính Xác',
-    description: 'Chuyên sản xuất khuôn nhựa, nhôm, dập, đồ giá, jig kiểm với độ chính xác cao',
-    image: 'https://hkchinhxac.com/logo/banner.png',
-    '@id': 'https://hkchinhxac.com',
-    url: 'https://hkchinhxac.com',
+    name: t('company.name'),
+    description: t('company.description'),
+    image: 'https://cokhihk.com/logo/banner.png',
+    '@id': 'https://cokhihk.com',
+    url: 'https://cokhihk.com',
     telephone: '+84-982-102-088',
     address: {
       '@type': 'PostalAddress',
@@ -55,7 +56,7 @@ export const useSEO = () => {
       opens: '08:00',
       closes: '17:00'
     }
-  }
+  }))
 
   // Service structured data
   const getServiceSchema = (service: {
@@ -68,7 +69,7 @@ export const useSEO = () => {
     serviceType: service.name,
     provider: {
       '@type': 'Organization',
-      name: 'HK Chính Xác'
+      name: t('company.name')
     },
     description: service.description,
     areaServed: {
@@ -92,11 +93,11 @@ export const useSEO = () => {
     image: product.image,
     brand: {
       '@type': 'Brand',
-      name: 'HK Chính Xác'
+      name: t('company.name')
     },
     manufacturer: {
       '@type': 'Organization',
-      name: 'HK Chính Xác'
+      name: t('company.name')
     },
     category: product.category
   })
@@ -116,42 +117,25 @@ export const useSEO = () => {
   // Generate page-specific meta tags
   const getPageMeta = (page: string) => {
     const baseMeta = {
-      title: 'HK Chính Xác',
-      description: 'Chuyên sản xuất khuôn nhựa, nhôm, dập, đồ giá, jig kiểm với độ chính xác cao',
+      title: t('company.name'),
+      description: t('company.description'),
       ogImage: '/logo/banner.png'
     }
 
+    // Get locale-aware meta data by using translation keys
+    const getLocalizedMeta = (titleKey: string, descriptionKey: string, image = '/logo/banner.png') => ({
+      title: t(titleKey),
+      description: t(descriptionKey),
+      ogImage: image
+    })
+
     const pageMeta: Record<string, typeof baseMeta> = {
-      '/': {
-        title: 'HK Chính Xác - Công Nghệ Cơ Khí Chính Xác',
-        description: 'HK Chính Xác chuyên sản xuất khuôn nhựa, nhôm, dập, đồ giá, jig kiểm với độ chính xác cao. Gia công CNC và sản xuất sản phẩm nhựa công nghiệp.',
-        ogImage: '/logo/banner.png'
-      },
-      '/about': {
-        title: 'Về Chúng Tôi - HK Chính Xác',
-        description: 'Tìm hiểu về HK Chính Xác - nhà cung cấp giải pháp khuôn mẫu và gia công cơ khí chính xác hàng đầu tại Việt Nam.',
-        ogImage: '/images/internal/b10.jpeg'
-      },
-      '/services': {
-        title: 'Dịch Vụ - HK Chính Xác',
-        description: 'Khám phá các dịch vụ của HK Chính Xác: Sản xuất khuôn mẫu, Gia công CNC, Sản xuất sản phẩm nhựa, Tư vấn kỹ thuật.',
-        ogImage: '/images/internal/b11.jpeg'
-      },
-      '/gallery': {
-        title: 'Sản Phẩm - HK Chính Xác',
-        description: 'Xem danh mục sản phẩm gia công chính xác của HK Chính Xác: Sản phẩm nhựa, nhôm, thiết bị máy móc.',
-        ogImage: '/images/internal/nhua-1.jpeg'
-      },
-      '/contact': {
-        title: 'Liên Hệ - HK Chính Xác',
-        description: 'Liên hệ với HK Chính Xác để được tư vấn và báo giá sản phẩm khuôn mẫu, gia công CNC chính xác.',
-        ogImage: '/logo/banner.png'
-      },
-      '/privacy-policy': {
-        title: 'Chính Sách Bảo Mật - HK Chính Xác',
-        description: 'Chính sách bảo mật và điều khoản sử dụng của HK Chính Xác.',
-        ogImage: '/logo/banner.png'
-      }
+      '/': getLocalizedMeta('seo.title', 'seo.description', '/logo/banner.png'),
+      '/about': getLocalizedMeta('seo.title', 'seo.description', '/images/internal/b10.jpeg'),
+      '/services': getLocalizedMeta('seo.title', 'seo.description', '/images/internal/b11.jpeg'),
+      '/gallery': getLocalizedMeta('seo.title', 'seo.description', '/images/internal/nhua-1.jpeg'),
+      '/contact': getLocalizedMeta('seo.title', 'seo.description', '/logo/banner.png'),
+      '/privacy-policy': getLocalizedMeta('seo.title', 'seo.description', '/logo/banner.png')
     }
 
     return pageMeta[page] || baseMeta

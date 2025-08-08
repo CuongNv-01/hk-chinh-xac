@@ -1,0 +1,110 @@
+{
+  "common": {
+    "learnMore": "Learn More",
+    "all": "All",
+    "filter": "Filter",
+    "readMore": "Read More",
+    "contactUs": "Contact Us",
+    "services": "Services",
+    "aboutUs": "About Us",
+    "home": "Home",
+    "gallery": "Products",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "homepage": {
+    "heroTitle": "HK Precision Mechanical Technology",
+    "heroSubtitle": "Specializing in manufacturing plastic molds, aluminum molds, stamping dies, fixtures, and inspection jigs with high precision",
+    "equipmentTitle": "Equipment",
+    "productsServicesTitle": "Products & Services",
+    "productsTitle": "Machined Products",
+    "latestNewsTitle": "Latest News",
+    "videoNotSupported": "Your browser does not support the video tag."
+  },
+  "features": {
+    "modernTech": {
+      "title": "Modern Technology",
+      "description": "Using advanced HITACHI and OKUMA CNC machines and Charmilles EDM systems."
+    },
+    "precisionEquipment": {
+      "title": "Precision Equipment",
+      "description": "Sumitomo and Toshiba injection molding machines, CMM inspection equipment ensuring high precision."
+    },
+    "competitivePrice": {
+      "title": "Competitive Pricing",
+      "description": "Providing optimal solutions with reasonable costs for businesses."
+    },
+    "professionalTeam": {
+      "title": "Professional Team",
+      "description": "Experienced technicians in precision mechanical machining field."
+    },
+    "dedicatedSupport": {
+      "title": "Dedicated Support",
+      "description": "In-depth technical consulting and quick customer support."
+    }
+  },
+  "services": {
+    "plasticMolds": {
+      "title": "Plastic Molds",
+      "description": "Design and manufacturing of injection molds for automotive, electronics, and household appliances."
+    },
+    "cncMachining": {
+      "title": "CNC Machining",
+      "description": "High precision machining with modern CNC machines."
+    },
+    "plasticProducts": {
+      "title": "Plastic Products",
+      "description": "Manufacturing high-quality industrial, medical, and household plastic components."
+    },
+    "technicalConsulting": {
+      "title": "Technical Consulting",
+      "description": "Design consulting and technical solutions for mold manufacturing."
+    },
+    "qualityControl": {
+      "title": "Quality Control",
+      "description": "Rigorous inspection with CMM equipment ensuring precision."
+    },
+    "warrantySupport": {
+      "title": "Warranty & Support",
+      "description": "Warranty service, mold repair, and post-sales technical support."
+    }
+  },
+  "gallery": {
+    "categories": {
+      "plasticProducts": "Plastic Products",
+      "aluminumProducts": "Aluminum Products",
+      "machinery": "Equipment & Machinery",
+      "others": "Others"
+    },
+    "altTexts": {
+      "plasticProduct": "Plastic product {number} - HK Precision",
+      "aluminumProduct": "Aluminum product {number} - HK Precision",
+      "machinery": "Machinery equipment {item} - HK Precision",
+      "product": "Machined product {number} - HK Precision"
+    }
+  },
+  "statistics": {
+    "customers": "Customers",
+    "qualityGuarantee": "Quality Guarantee",
+    "internationalStandards": "International Standards"
+  },
+  "news": {
+    "isoTitle": "HK Precision achieves ISO 9001:2015 certification",
+    "newProductTitle": "Launch of new FUTABA standard plastic mold series",
+    "author": "HK Admin",
+    "altText": {
+      "iso": "HK Precision News - ISO 9001:2015 Certification",
+      "futaba": "HK Precision News - FUTABA Standard Plastic Molds"
+    }
+  },
+  "seo": {
+    "title": "HK Precision - Precision Mechanical Technology | Plastic Molds & CNC Machining",
+    "description": "HK Precision Mechanical Technology specializes in manufacturing plastic molds, aluminum molds, stamping dies, fixtures, and inspection jigs with high precision. HITACHI, OKUMA CNC machining, Charmilles EDM. Manufacturing high-quality industrial, medical, and household plastic components in Vietnam.",
+    "keywords": "plastic molds, CNC machining, stamping dies, inspection jigs, HITACHI CNC machines, OKUMA, Charmilles EDM, industrial plastic products, precision mechanics, HK Precision"
+  },
+  "company": {
+    "name": "HK Precision",
+    "fullName": "HK Precision Mechanical Technology",
+    "description": "HK Precision Mechanical Technology specializes in manufacturing plastic molds, aluminum molds, stamping dies, fixtures, and inspection jigs with high precision."
+  }
+}

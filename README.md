@@ -105,3 +105,5 @@ Note:
 Kèm line tin tức, giá vàng,  chứng khoán, thời tiết hai bên trái phải
 
 Anh và tiếng Nhật
+
+Read Serena's initial instructions to access indexed code context and available tools from the serena-mcp-server running in the current project.

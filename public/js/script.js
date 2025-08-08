@@ -550,17 +550,17 @@
 			}
 
 			elements.on('input change propertychange blur', function (e) {
-				var $this = $(this), results;
+				var this = $(this), results;
 
-				if (e.type !== "blur") if (!$this.parent().hasClass("has-error")) return;
-				if ($this.parents('.rd-mailform').hasClass('success')) return;
+				if (e.type !== "blur") if (!this.parent().hasClass("has-error")) return;
+				if (this.parents('.rd-mailform').hasClass('success')) return;
 
-				if ((results = $this.regula('validate')).length) {
+				if ((results = this.regula('validate')).length) {
 					for (i = 0; i < results.length; i++) {
-						$this.siblings(".form-validation").text(results[i].message).parent().addClass("has-error");
+						this.siblings(".form-validation").text(results[i].message).parent().addClass("has-error");
 					}
 				} else {
-					$this.siblings(".form-validation").text("").parent().removeClass("has-error")
+					this.siblings(".form-validation").text("").parent().removeClass("has-error")
 				}
 			}).regula('bind');
 
@@ -646,18 +646,18 @@
 				.addClass('has-error');
 
 				captcha.on('propertychange', function () {
-					var $this = $(this),
-							captchaToken = $this.find('.g-recaptcha-response').val();
+					var this = $(this),
+							captchaToken = this.find('.g-recaptcha-response').val();
 
 					if (captchaToken.length > 0) {
-						$this
+						this
 						.closest('.form-wrap')
 						.removeClass('has-error');
-						$this
+						this
 						.siblings('.form-validation')
 						.removeClass('active')
 						.html('');
-						$this.off('propertychange');
+						this.off('propertychange');
 					}
 				});
 
@@ -1044,11 +1044,11 @@
 				//If have slick carousel inside tab - resize slick carousel on click
 				if (bootstrapTabsItem.find('.slick-slider').length) {
 					bootstrapTabsItem.find('.tabs-custom-list > li > a').on('click', $.proxy(function () {
-						var $this = $(this);
+						var this = $(this);
 						var setTimeOutTime = isNoviBuilder ? 1500 : 300;
 
 						setTimeout(function () {
-							$this.find('.tab-content .tab-pane.active .slick-slider').slick('setPosition');
+							this.find('.tab-content .tab-pane.active .slick-slider').slick('setPosition');
 						}, setTimeOutTime);
 					}, bootstrapTabsItem));
 				}
@@ -1199,9 +1199,9 @@
 								timer: {}
 							};
 
-					var $toggle = $('.rd-navbar-search-toggle');
-					if ($toggle.length) {
-						$toggle.on('click', (function (searchItem) {
+					var toggle = $('.rd-navbar-search-toggle');
+					if (toggle.length) {
+						toggle.on('click', (function (searchItem) {
 							return function () {
 								if (!($(this).hasClass('active'))) {
 									searchItem.find('input').val('').trigger('propertychange');
@@ -1388,12 +1388,12 @@
 				$mailchimpItem.on('submit', $.proxy(function ($email, event) {
 					event.preventDefault();
 
-					var $this = this;
+					var this = this;
 
 					var data = {},
-							url = $this.attr('action').replace('/post?', '/post-json?').concat('&c=?'),
-							dataArray = $this.serializeArray(),
-							$output = $("#" + $this.attr("data-form-output"));
+							url = this.attr('action').replace('/post?', '/post-json?').concat('&c=?'),
+							dataArray = this.serializeArray(),
+							$output = $("#" + this.attr("data-form-output"));
 
 					for (i = 0; i < dataArray.length; i++) {
 						data[dataArray[i].name] = dataArray[i].value;
@@ -1425,7 +1425,7 @@
 
 							var isValidated = (function () {
 								var results, errors = 0;
-								var elements = $this.find('[data-constraints]');
+								var elements = this.find('[data-constraints]');
 								var captcha = null;
 								if (elements.length) {
 									for (var j = 0; j < elements.length; j++) {
@@ -1475,7 +1475,7 @@
 							url = this.attr('action'),
 							dataArray = this.serializeArray(),
 							$output = $("#" + plugins.campaignMonitor.attr("data-form-output")),
-							$this = $(this);
+							this = $(this);
 
 					for (i = 0; i < dataArray.length; i++) {
 						data[dataArray[i].name] = dataArray[i].value;
@@ -1501,7 +1501,7 @@
 						},
 						beforeSend: function (data) {
 							// Stop request if builder or inputs are invalide
-							if (isNoviBuilder || !isValidated($this.find('[data-constraints]')))
+							if (isNoviBuilder || !isValidated(this.find('[data-constraints]')))
 								return false;
 
 							$output.html('Submitting...').addClass('active');
@@ -1509,7 +1509,7 @@
 					});
 
 					// Clear inputs after submit
-					var inputs = $this[0].getElementsByTagName('input');
+					var inputs = this[0].getElementsByTagName('input');
 					for (var i = 0; i < inputs.length; i++) {
 						inputs[i].value = '';
 						var label = document.querySelector('[for="' + inputs[i].getAttribute('id') + '"]');
@@ -1707,17 +1707,17 @@
 		// Custom Toggles
 		if (plugins.customToggle.length) {
 			for (var i = 0; i < plugins.customToggle.length; i++) {
-				var $this = $(plugins.customToggle[i]);
+				var this = $(plugins.customToggle[i]);
 
-				$this.on('click', $.proxy(function (event) {
+				this.on('click', $.proxy(function (event) {
 					event.preventDefault();
 
 					var $ctx = $(this);
 					$($ctx.attr('data-custom-toggle')).add(this).toggleClass('active');
-				}, $this));
+				}, this));
 
-				if ($this.attr("data-custom-toggle-hide-on-blur") === "true") {
-					$body.on("click", $this, function (e) {
+				if (this.attr("data-custom-toggle-hide-on-blur") === "true") {
+					$body.on("click", this, function (e) {
 						if (e.target !== e.data[0]
 								&& $(e.data.attr('data-custom-toggle')).find($(e.target)).length
 								&& e.data.find($(e.target)).length === 0) {
@@ -1726,8 +1726,8 @@
 					})
 				}
 
-				if ($this.attr("data-custom-toggle-disable-on-blur") === "true") {
-					$body.on("click", $this, function (e) {
+				if (this.attr("data-custom-toggle-disable-on-blur") === "true") {
+					$body.on("click", this, function (e) {
 						if (e.target !== e.data[0] && $(e.data.attr('data-custom-toggle')).find($(e.target)).length === 0 && e.data.find($(e.target)).length === 0) {
 							$(e.data.attr('data-custom-toggle')).add(e.data[0]).removeClass('active');
 						}
@@ -1771,27 +1771,27 @@
 			for (var i = 0; i < plugins.progressCircle.length; i++) {
 				var progressCircleItem = $(plugins.progressCircle[i]);
 				$document.on("scroll", $.proxy(function () {
-					var $this = $(this);
+					var this = $(this);
 
-					if (!$this.hasClass('animated') && isScrolledIntoView($this)) {
+					if (!this.hasClass('animated') && isScrolledIntoView(this)) {
 
-						var arrayGradients = $this.attr('data-gradient').split(",");
+						var arrayGradients = this.attr('data-gradient').split(",");
 
-						$this.progressCircle({
-							value:      $this.attr('data-value'),
-							size:       $this.attr('data-size') ? $this.attr('data-size') : 175,
+						this.progressCircle({
+							value:      this.attr('data-value'),
+							size:       this.attr('data-size') ? this.attr('data-size') : 175,
 							fill:       {
 								gradient:      arrayGradients,
 								gradientAngle: Math.PI / 4
 							},
 							startAngle: -Math.PI / 4 * 2,
-							emptyFill:  $this.attr('data-empty-fill') ? $this.attr('data-empty-fill') : "rgb(245,245,245)",
-							thickness:  $this.attr('data-thickness') ? parseInt($this.attr('data-thickness'), 10) : 10
+							emptyFill:  this.attr('data-empty-fill') ? this.attr('data-empty-fill') : "rgb(245,245,245)",
+							thickness:  this.attr('data-thickness') ? parseInt(this.attr('data-thickness'), 10) : 10
 
 						}).on('circle-animation-progress', function (event, progress, stepValue) {
 							$(this).find('span').text(String(stepValue.toFixed(2)).replace('0.', '').replace('1.', '1'));
 						});
-						$this.addClass('animated');
+						this.addClass('animated');
 					}
 				}, progressCircleItem))
 				.trigger("scroll");
@@ -1989,8 +1989,8 @@
 				})
 
 				.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-					var $this = $(this),
-							childCarousel = $this.attr('data-child');
+					var this = $(this),
+							childCarousel = this.attr('data-child');
 
 					if (childCarousel) {
 						$(childCarousel + ' .slick-slide').removeClass('slick-current');
@@ -2044,9 +2044,9 @@
 		if (plugins.customWaypoints.length && !isNoviBuilder) {
 			var i;
 			for (i = 0; i < plugins.customWaypoints.length; i++) {
-				var $this = $(plugins.customWaypoints[i]);
+				var this = $(plugins.customWaypoints[i]);
 
-				$this.on('click', function (e) {
+				this.on('click', function (e) {
 					e.preventDefault();
 
 					$("body, html").stop().animate({
