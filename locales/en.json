@@ -72,8 +72,8 @@
   "gallery": {
     "categories": {
       "plasticProducts": "Plastic Products",
-      "aluminumProducts": "Aluminum Products",
-      "machinery": "Equipment & Machinery",
+      "aluminumProducts": "Cast Aluminum Products",
+      "machinery": "Machinery",
       "others": "Others"
     },
     "altTexts": {

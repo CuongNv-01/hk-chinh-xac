@@ -4,7 +4,7 @@
     <section class="bg-gray-7">
       <div class="breadcrumbs-custom box-transform-wrap context-dark">
         <div class="container">
-          <h3 class="breadcrumbs-custom-title" style="color: #000; font-weight: 900;">{{ t('galleryPage.title') }}</h3>
+          <h3 class="breadcrumbs-custom-title" style="color: #fff; font-weight: 900;">{{ t('galleryPage.title') }}</h3>
           <div class="breadcrumbs-custom-decor"></div>
         </div>
         <div class="box-transform" style="background-image: url(/logo/banner.png);"></div>
@@ -29,9 +29,9 @@
           </button>
           <ul class="isotope-filters-list">
             <li><a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">{{ t('common.all') }}</a></li>
-            <li><a href="#" data-isotope-filter="nhua" data-isotope-group="gallery">{{ t('gallery.categories.plasticProducts') }}</a></li>
-            <li><a href="#" data-isotope-filter="nhom" data-isotope-group="gallery">{{ t('gallery.categories.aluminumProducts') }}</a></li>
             <li><a href="#" data-isotope-filter="may" data-isotope-group="gallery">{{ t('gallery.categories.machinery') }}</a></li>
+            <li><a href="#" data-isotope-filter="nhom" data-isotope-group="gallery">{{ t('gallery.categories.aluminumProducts') }}</a></li>
+            <li><a href="#" data-isotope-filter="nhua" data-isotope-group="gallery">{{ t('gallery.categories.plasticProducts') }}</a></li>
             <li><a href="#" data-isotope-filter="khac" data-isotope-group="gallery">{{ t('gallery.categories.others') }}</a></li>
           </ul>
         </div>
@@ -42,35 +42,35 @@
              data-column-class=".col-1"
              data-lightgallery="group">
           <div class="col-1 isotope-item isotope-sizer"></div>
-          <!-- Sản phẩm Nhựa -->
-          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="nhua" v-for="i in 5" :key="`nhua-${i}`">
+          <!-- Máy móc -->
+          <div :class="item === 0 ? 'col-12 isotope-item' : 'col-sm-6 col-lg-4 col-xxl-3 isotope-item'" data-filter="may" v-for="item in [0,1,4,8,10,11,12]" :key="item">
             <article class="thumbnail thumbnail-modern">
-              <a class="thumbnail-modern-figure" :href="`/images/internal/nhua-${i}.jpeg`" data-lightgallery="item">
-                <img :src="`/images/internal/nhua-${i}.jpeg`" :alt="t('gallery.altTexts.plasticProduct', { number: i })" width="474" height="355"/>
+              <a class="thumbnail-modern-figure" :href="`/images/internal/new/may-moc/${item}.jpeg`" data-lightgallery="item">
+                <img :src="`/images/internal/new/may-moc/${item}.jpeg`" :alt="t('gallery.altTexts.machinery', { item })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>
           <!-- Sản phẩm Nhôm -->
-          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="nhom" v-for="i in 6" :key="`nhom-${i}`">
+          <div :class="i === 1 ? 'col-12 isotope-item' : 'col-sm-6 col-lg-4 col-xxl-3 isotope-item'" data-filter="nhom" v-for="i in [1,2,3,4,5,6,7,8,9,10,11]" :key="`nhom-${i}`">
             <article class="thumbnail thumbnail-modern">
-              <a class="thumbnail-modern-figure" :href="`/images/internal/nhom-${i}.jpeg`" data-lightgallery="item">
-                <img :src="`/images/internal/nhom-${i}.jpeg`" :alt="t('gallery.altTexts.aluminumProduct', { number: i })" width="474" height="355"/>
+              <a class="thumbnail-modern-figure" :href="`/images/internal/new/san-pham-nhom/${i}.jpeg`" data-lightgallery="item">
+                <img :src="`/images/internal/new/san-pham-nhom/${i}.jpeg`" :alt="t('gallery.altTexts.aluminumProduct', { number: i })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>
-          <!-- Máy móc -->
-          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="may" v-for="item in ['may-1', 'may-ep-nhua', 'may-thoi', 'may-thoi-2']" :key="item">
+          <!-- Sản phẩm Nhựa -->
+          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="nhua" v-for="i in [1,2,3,4,5,6,7]" :key="`nhua-${i}`">
             <article class="thumbnail thumbnail-modern">
-              <a class="thumbnail-modern-figure" :href="`/images/internal/${item}.jpeg`" data-lightgallery="item">
-                <img :src="`/images/internal/${item}.jpeg`" :alt="t('gallery.altTexts.machinery', { item })" width="474" height="355"/>
+              <a class="thumbnail-modern-figure" :href="`/images/internal/new/san-pham-nhua/${i}.jpeg`" data-lightgallery="item">
+                <img :src="`/images/internal/new/san-pham-nhua/${i}.jpeg`" :alt="t('gallery.altTexts.plasticProduct', { number: i })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>
           <!-- Khác -->
-          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="khac" v-for="i in [7, 9, 10, 11, 12, 13, 14, 18, 19]" :key="`other-${i}`">
+          <div :class="i === 0 ? 'col-12 isotope-item' : 'col-sm-6 col-lg-4 col-xxl-3 isotope-item'" data-filter="khac" v-for="i in [2,3,5,6,7,9]" :key="`other-${i}`">
             <article class="thumbnail thumbnail-modern">
-              <a class="thumbnail-modern-figure" :href="`/images/internal/b${i}.${i === 18 ? 'png' : 'jpeg'}`" data-lightgallery="item">
-                <img :src="`/images/internal/b${i}.${i === 18 ? 'png' : 'jpeg'}`" :alt="t('gallery.altTexts.product', { number: i })" width="474" height="355"/>
+              <a class="thumbnail-modern-figure" :href="`/images/internal/new/${i}.jpeg`" data-lightgallery="item">
+                <img :src="`/images/internal/new/${i}.jpeg`" :alt="t('gallery.altTexts.product', { number: i })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>

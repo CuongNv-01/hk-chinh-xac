@@ -13,9 +13,9 @@
         <div class="row">
           <div class="col-sm-8 col-md-7 col-lg-6 offset-lg-1 offset-xxl-0 text-left" style="color: #2980B9; padding-left: 40px;">
             <h3 class="oh hero-title wow fadeInUp">
-              <span class="d-inline-block" style="font-weight: 900; color: #2980B9">{{ t('homepage.heroTitle') }}</span>
+              <span class="d-inline-block" style="font-weight: 900; color: #00DC82">{{ t('homepage.heroTitle') }}</span>
             </h3>
-            <h5 class="hero-subtitle wow fadeInLeft" data-wow-delay="0.3s" style="color: #000">
+            <h5 class="hero-subtitle wow fadeInLeft text-white" data-wow-delay="0.3s" style="color: #000">
               {{ t('homepage.heroSubtitle') }}
             </h5>
             <a class="button button-lg button-primary button-winona button-shadow-2 wow fadeInUp"
@@ -25,6 +25,29 @@
         </div>
       </div>
     </section>
+
+    <!-- Header Top -->
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content">
+          <div class="header-contact">
+            <div class="contact-item">
+              <i class="mdi mdi-phone"></i>
+              <a href="tel:0971242363">Mr Viet Anh 0971242363 | Mr Hieu 0329809522</a>
+            </div>
+            <div class="contact-item">
+              <i class="mdi mdi-map-marker"></i>
+              <span>Số 4 ngõ 2, Tây Sơn, TT Phùng, Hà Nội</span>
+            </div>
+          </div>
+          <div class="header-social">
+            <a href="#" class="social-link"><i class="mdi mdi-facebook"></i></a>
+            <a href="#" class="social-link"><i class="mdi mdi-instagram"></i></a>
+            <a href="#" class="social-link"><i class="mdi mdi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- About Company-->
     <section class="section section-md bg-gray-100 text-md-left section-relative">
@@ -76,7 +99,7 @@
               <div class="swiper-slide" v-for="(service, index) in services" :key="service.id">
                 <article class="services-creative">
                   <a class="services-creative-figure">
-                    <img :src="service.image" :alt="service.title + ' - HK Chính Xác'" width="370" height="274" loading="lazy"/>
+                    <img :src="service.image" :alt="service.title + ' - Starpx Apac'" width="370" height="274" loading="lazy"/>
                   </a>
                   <div class="services-creative-caption">
                     <h5 class="services-creative-title">{{ service.title }}</h5>
@@ -108,9 +131,9 @@
           </button>
           <ul class="isotope-filters-list">
             <li><a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">{{ t('common.all') }}</a></li>
-            <li><a href="#" data-isotope-filter="nhua" data-isotope-group="gallery">{{ t('gallery.categories.plasticProducts') }}</a></li>
-            <li><a href="#" data-isotope-filter="nhom" data-isotope-group="gallery">{{ t('gallery.categories.aluminumProducts') }}</a></li>
             <li><a href="#" data-isotope-filter="may" data-isotope-group="gallery">{{ t('gallery.categories.machinery') }}</a></li>
+            <li><a href="#" data-isotope-filter="nhom" data-isotope-group="gallery">{{ t('gallery.categories.aluminumProducts') }}</a></li>
+            <li><a href="#" data-isotope-filter="nhua" data-isotope-group="gallery">{{ t('gallery.categories.plasticProducts') }}</a></li>
             <li><a href="#" data-isotope-filter="khac" data-isotope-group="gallery">{{ t('gallery.categories.others') }}</a></li>
           </ul>
         </div>
@@ -121,35 +144,35 @@
              data-column-class=".col-1"
              data-lightgallery="group">
           <div class="col-1 isotope-item isotope-sizer"></div>
-          <!-- Sản phẩm Nhựa -->
-          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="nhua" v-for="i in 5" :key="`nhua-${i}`">
+          <!-- Máy móc -->
+          <div :class="item === 0 ? 'col-12 isotope-item' : 'col-sm-6 col-lg-4 col-xxl-3 isotope-item'" data-filter="may" v-for="item in [0,1,4,8,10,11,12]" :key="item">
             <article class="thumbnail thumbnail-modern">
-              <a class="thumbnail-modern-figure" :href="`/images/internal/nhua-${i}.jpeg`" data-lightgallery="item">
-                <img :src="`/images/internal/nhua-${i}.jpeg`" :alt="t('gallery.altTexts.plasticProduct', { number: i })" width="474" height="355" loading="lazy"/>
+              <a class="thumbnail-modern-figure" :href="`/images/internal/new/may-moc/${item}.jpeg`" data-lightgallery="item">
+                <img :src="`/images/internal/new/may-moc/${item}.jpeg`" :alt="t('gallery.altTexts.machinery', { item })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>
           <!-- Sản phẩm Nhôm -->
-          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="nhom" v-for="i in 6" :key="`nhom-${i}`">
+          <div :class="i === 1 ? 'col-12 isotope-item' : 'col-sm-6 col-lg-4 col-xxl-3 isotope-item'" data-filter="nhom" v-for="i in [1,2,3,4,5,6,7,8,9,10,11]" :key="`nhom-${i}`">
             <article class="thumbnail thumbnail-modern">
-              <a class="thumbnail-modern-figure" :href="`/images/internal/nhom-${i}.jpeg`" data-lightgallery="item">
-                <img :src="`/images/internal/nhom-${i}.jpeg`" :alt="t('gallery.altTexts.aluminumProduct', { number: i })" width="474" height="355" loading="lazy"/>
+              <a class="thumbnail-modern-figure" :href="`/images/internal/new/san-pham-nhom/${i}.jpeg`" data-lightgallery="item">
+                <img :src="`/images/internal/new/san-pham-nhom/${i}.jpeg`" :alt="t('gallery.altTexts.aluminumProduct', { number: i })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>
-          <!-- Máy móc -->
-          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="may" v-for="item in ['may-1', 'may-ep-nhua', 'may-thoi', 'may-thoi-2']" :key="item">
+          <!-- Sản phẩm Nhựa -->
+          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="nhua" v-for="i in [1,2,3,4,5,6,7]" :key="`nhua-${i}`">
             <article class="thumbnail thumbnail-modern">
-              <a class="thumbnail-modern-figure" :href="`/images/internal/${item}.jpeg`" data-lightgallery="item">
-                <img :src="`/images/internal/${item}.jpeg`" :alt="t('gallery.altTexts.machinery', { item })" width="474" height="355" loading="lazy"/>
+              <a class="thumbnail-modern-figure" :href="`/images/internal/new/san-pham-nhua/${i}.jpeg`" data-lightgallery="item">
+                <img :src="`/images/internal/new/san-pham-nhua/${i}.jpeg`" :alt="t('gallery.altTexts.plasticProduct', { number: i })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>
           <!-- Khác -->
-          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="khac" v-for="i in [7, 9, 10, 11, 12, 13, 14, 18, 19]" :key="`other-${i}`">
+          <div :class="i === 0 ? 'col-12 isotope-item' : 'col-sm-6 col-lg-4 col-xxl-3 isotope-item'" data-filter="khac" v-for="i in [2,3,5,6,7,9]" :key="`other-${i}`">
             <article class="thumbnail thumbnail-modern">
-              <a class="thumbnail-modern-figure" :href="`/images/internal/b${i}.${i === 18 ? 'png' : 'jpeg'}`" data-lightgallery="item">
-                <img :src="`/images/internal/b${i}.${i === 18 ? 'png' : 'jpeg'}`" :alt="t('gallery.altTexts.product', { number: i })" width="474" height="355" loading="lazy"/>
+              <a class="thumbnail-modern-figure" :href="`/images/internal/new/${i}.jpeg`" data-lightgallery="item">
+                <img :src="`/images/internal/new/${i}.jpeg`" :alt="t('gallery.altTexts.product', { number: i })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>
@@ -192,7 +215,7 @@
                 </div>
                 <div class="tab-pane fade" id="tabs-9-2">
                   <div class="post-amy-figure">
-                    <img src="/images/internal/b11.jpeg" :alt="t('news.altText.futaba')" width="570" height="505" loading="lazy"/>
+                    <img src="/images/internal/b10.jpeg" :alt="t('news.altText.futaba')" width="570" height="505" loading="lazy"/>
                     <a href="#"><span class="icon linearicons-link2"></span></a>
                   </div>
                 </div>
@@ -201,10 +224,10 @@
             <div class="col-md-6 index-1">
               <h3 class="tabs-post-title oh-desktop"><span class="d-inline-block wow slideInDown">{{ t('homepage.latestNewsTitle') }}</span></h3>
               <ul class="nav nav-tabs">
-                <li class="nav-item wow fadeInRight" role="presentation" v-for="(news, index) in latestNews" :key="news.id">
+                <li class="nav-item wow fadeInRight cursor-pointer" role="presentation" v-for="(news, index) in latestNews" :key="news.id">
                   <a class="nav-link" :class="{ active: index === 0 }" :href="`#tabs-9-${index + 1}`" data-toggle="tab"></a>
                   <div class="post-amy">
-                    <h5 class="post-amy-title"><a href="#">{{ news.title }}</a></h5>
+                    <h5 class="post-amy-title">{{ news.title }}</h5>
                     <ul class="post-amy-info list-inline">
                       <li class="post-amy-time">
                         <span class="icon mdi mdi-clock"></span>
@@ -212,7 +235,7 @@
                       </li>
                       <li class="post-amy-autor">
                         <span class="icon mdi mdi-account-outline"></span>
-                        <a href="#">{{ news.author }}</a>
+                        {{ news.author }}
                       </li>
                     </ul>
                   </div>
@@ -290,7 +313,7 @@ useSchemaOrg(() => [
   defineOrganization({
     name: t('company.name'),
     url: 'https://cokhihk.com',
-    logo: '/logo/Logo_HK.svg',
+    logo: '/logo/Logo_Apac.png',
     description: t('company.description'),
     address: {
       '@type': 'PostalAddress',

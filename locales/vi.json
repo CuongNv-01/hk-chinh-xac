@@ -72,8 +72,8 @@
   "gallery": {
     "categories": {
       "plasticProducts": "Sản Phẩm Nhựa",
-      "aluminumProducts": "Sản Phẩm Nhôm",
-      "machinery": "Thiết Bị & Máy Móc",
+      "aluminumProducts": "Sản Phẩm Đúc Nhôm",
+      "machinery": "Máy Móc",
       "others": "Khác"
     },
     "altTexts": {

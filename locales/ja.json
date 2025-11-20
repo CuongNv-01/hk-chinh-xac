@@ -72,8 +72,8 @@
   "gallery": {
     "categories": {
       "plasticProducts": "プラスチック製品",
-      "aluminumProducts": "アルミニウム製品",
-      "machinery": "設備・機械",
+      "aluminumProducts": "アルミ鋳造製品",
+      "machinery": "機械設備",
       "others": "その他"
     },
     "altTexts": {
