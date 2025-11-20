@@ -6,11 +6,11 @@
         <ul class="v2-contacts">
           <li class="v2-contact">
             <span class="icon mdi mdi-phone"></span>
-            <a href="tel:0982102088" aria-label="Phone">0982102088 | 0329809522</a>
+            <a href="tel:0971242363" aria-label="Phone">Mr Viet Anh 0971242363 | Mr Hieu 0329809522</a>
           </li>
           <li class="v2-contact">
             <span class="icon mdi mdi-map-marker"></span>
-            <a href="#" aria-label="Address">21, Huu Cuoc, O Dien, Ha Noi City</a>
+            <a href="#" aria-label="Address">Số 4 ngõ 2, Tây Sơn, TT Phùng, Hà Nội</a>
           </li>
         </ul>
         <ul class="v2-social">
@@ -25,8 +25,8 @@
     <!-- Main navbar -->
     <div class="v2-navbar">
       <div class="v2-container v2-navbar-inner">
-        <NuxtLink class="v2-brand" :to="localePath('/')" aria-label="HK Chính Xác">
-          <img src="/logo/Logo_HK.svg" :alt="t('company.name')" width="219" height="39" />
+        <NuxtLink class="v2-brand" :to="localePath('/')" aria-label="Starpx Apac">
+          <img src="/logo/Logo_Apac.png" :alt="t('company.name')" width="219" height="39" />
         </NuxtLink>
 
         <button class="v2-burger" :aria-expanded="isMenuOpen ? 'true' : 'false'" aria-label="Toggle menu" @click="toggleMenu">
@@ -62,7 +62,7 @@
         <aside class="v2-drawer" :class="{ open: isMenuOpen }" aria-hidden="true">
           <div class="v2-drawer-header">
             <NuxtLink class="v2-brand" :to="localePath('/')" @click="closeMenu">
-              <img src="/logo/Logo_HK.svg" :alt="t('company.name')" width="180" height="32" />
+              <img src="/logo/Logo_Apac.png" :alt="t('company.name')" width="180" height="32" />
             </NuxtLink>
             <button class="v2-close" aria-label="Close menu" @click="closeMenu">✕</button>
           </div>

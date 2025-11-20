@@ -35,13 +35,13 @@
                   <div class="footer-classic-contacts-item">
                     <div class="unit unit-spacing-sm align-items-center">
                       <div class="unit-left"><span class="icon icon-24 mdi mdi-phone"></span></div>
-                      <div class="unit-body"><a class="phone" href="tel:0982102088">0982102088 | 0329809522</a></div>
+                      <div class="unit-body"><a class="phone" href="tel:0971242363">Mr Viet Anh 0971242363 | Mr Hieu 0329809522</a></div>
                     </div>
                   </div>
                   <div class="footer-classic-contacts-item">
                     <div class="unit unit-spacing-sm align-items-center">
                       <div class="unit-left"><span class="icon mdi mdi-email"></span></div>
-                      <div class="unit-body"><a class="mail" href="mailto:cokhichinhxachk@gmail.com">cokhichinhxachk@gmail.com</a></div>
+                      <div class="unit-body"><a class="mail" href="mailto:thanhcongphat2016@gmail.com">thanhcongphat2016@gmail.com</a></div>
                     </div>
                   </div>
                 </div>

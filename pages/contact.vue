@@ -109,8 +109,8 @@
                   <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
                     <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
                     <div class="unit-body">
-                      <a class="phone" href="tel:0982102088">0982102088</a><br>
-                      <a class="phone" href="tel:0329809522">0329809522</a>
+                      <a class="phone" href="tel:0971242363">Mr Viet Anh 0971242363</a><br>
+                      <a class="phone" href="tel:Mr Hieu 0329809522">Mr Hieu 0329809522</a>
                     </div>
                   </div>
                 </div>
@@ -119,14 +119,14 @@
                   <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
                     <div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
                     <div class="unit-body">
-                      <a class="mail" href="mailto:cokhichinhxachk@gmail.com">cokhichinhxachk@gmail.com</a>
+                      <a class="mail" href="mailto:thanhcongphat2016@gmail.com">thanhcongphat2016@gmail.com</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-6 col-lg-12 aside-contacts-item">
                   <p class="aside-contacts-title">{{ t('contactPage.info.address') }}</p>
                   <div class="unit-body">
-                    <a class="address" href="#"><br class="d-md-none">21, Huu Cuoc, O Dien, Ha Noi City</a>
+                    <a class="address" href="#"><br class="d-md-none">Số 4 ngõ 2, Tây Sơn, TT Phùng, Hà Nội</a>
                   </div>
                 </div>
               </div>

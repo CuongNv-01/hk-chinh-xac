@@ -1,17 +1,17 @@
 <template>
   <header class="header-v3">
     <!-- Top Bar -->
-    <div class="header-top">
+    <!-- <div class="header-top">
       <div class="container">
         <div class="header-top-content">
           <div class="header-contact">
             <div class="contact-item">
               <i class="mdi mdi-phone"></i>
-              <a href="tel:0982102088">0982102088 | 0329809522</a>
+              <a href="tel:0971242363">Mr Viet Anh 0971242363 | Mr Hieu 0329809522</a>
             </div>
             <div class="contact-item">
               <i class="mdi mdi-map-marker"></i>
-              <span>21, Huu Cuoc, O Dien, Ha Noi City</span>
+              <span>Số 4 ngõ 2, Tây Sơn, TT Phùng, Hà Nội</span>
             </div>
           </div>
           <div class="header-social">
@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Main Header -->
     <div class="header-main" :class="{ 'header-scrolled': isScrolled }">
@@ -30,7 +30,7 @@
           <!-- Logo -->
           <div class="header-logo">
             <NuxtLink :to="localePath('/')">
-              <img src="/logo/Logo_HK.svg" :alt="t('company.name')" />
+              <img src="/logo/Logo_Apac.png" :alt="t('company.name')" />
             </NuxtLink>
           </div>
 
@@ -153,11 +153,11 @@
         <div class="mobile-contact">
           <div class="contact-item">
             <i class="mdi mdi-phone"></i>
-            <a href="tel:0982102088">0982102088 | 0329809522</a>
+            <a href="tel:0971242363">Mr Viet Anh 0971242363 | Mr Hieu 0329809522</a>
           </div>
           <div class="contact-item">
             <i class="mdi mdi-email"></i>
-            <a href="mailto:cokhichinhxachk@gmail.com">cokhichinhxachk@gmail.com</a>
+            <a href="mailto:thanhcongphat2016@gmail.com">thanhcongphat2016@gmail.com</a>
           </div>
         </div>
       </div>
@@ -217,7 +217,7 @@ onUnmounted(() => {
 })
 </script>
 
-<style scoped>
+<style>
 .header-v3 {
   position: relative;
   z-index: 1000;
@@ -225,10 +225,10 @@ onUnmounted(() => {
 
 /* Top Bar */
 .header-top {
-  background: #1a1a1a;
+  background: #00DC82;
   color: #ffffff;
   padding: 8px 0;
-  font-size: 14px;
+  font-size: 19px;
 }
 
 .header-top-content {

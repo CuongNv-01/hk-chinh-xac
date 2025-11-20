@@ -54,7 +54,7 @@
             {{ t('privacyPage.sections.dataSharing.content') }}
           </dd>
         </dl>
-        <a class="privacy-link" :href="`mailto:cokhichinhxachk@gmail.com`">cokhichinhxachk@gmail.com</a>
+        <a class="privacy-link" :href="`mailto:thanhcongphat2016@gmail.com`">thanhcongphat2016@gmail.com</a>
       </div>
     </section>
   </div>

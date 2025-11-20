@@ -1,4 +1,4 @@
-# HK Chính Xác - Nuxt 3 Project
+# Starpx Apac - Nuxt 3 Project
 
 ## Overview
 This is a modern Nuxt 3 website migrated from static HTML pages, featuring full TypeScript support and SEO optimization.
@@ -89,7 +89,7 @@ The project can be deployed as:
 - pnpm 8+ recommended
 
 ## License
-© 2025 HK Chính Xác. All rights reserved.
+© 2025 Starpx Apac. All rights reserved.
 
 
 NOTE:

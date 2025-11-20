@@ -27,7 +27,7 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#2980B9' },
         { name: 'robots', content: 'index, follow' },
         { name: 'googlebot', content: 'index, follow' },
-        { name: 'author', content: 'HK Chính Xác' },
+        { name: 'author', content: 'Starpx Apac' },
         { name: 'revisit-after', content: '7 days' },
         { name: 'distribution', content: 'global' },
         { name: 'rating', content: 'general' },
@@ -36,10 +36,10 @@ export default defineNuxtConfig({
         { name: 'language', content: 'Vietnamese' }
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/logo/Logo_HK.svg' },
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/logo/Logo_HK.svg' },
-        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/logo/Logo_HK.svg' },
-        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/logo/Logo_HK.svg' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/logo/Logo_Apac.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/logo/Logo_Apac.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/logo/Logo_Apac.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/logo/Logo_Apac.png' },
         { rel: 'canonical', href: 'https://cokhihk.com' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600,700,900%7CRaleway:500&display=swap' }
       ],
@@ -94,7 +94,7 @@ export default defineNuxtConfig({
   // SEO Configuration
   site: {
     url: 'https://cokhihk.com',
-    name: 'HK Chính Xác',
+    name: 'Starpx Apac',
     description: 'Công ty Cơ Khí Chính Xác HK chuyên sản xuất khuôn nhựa, nhôm, dập, đồ giá, jig kiểm với độ chính xác cao. Gia công CNC và sản xuất sản phẩm nhựa công nghiệp tại Việt Nam.',
     defaultLocale: 'vi'
   },

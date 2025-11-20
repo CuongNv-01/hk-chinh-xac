@@ -9,7 +9,7 @@ export const useSEO = () => {
     name: t('company.name'),
     alternateName: t('company.fullName'),
     url: 'https://cokhihk.com',
-    logo: 'https://cokhihk.com/logo/Logo_HK.svg',
+    logo: 'https://cokhihk.com/logo/Logo_Apac.png',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+84-982-102-088',

@@ -64,7 +64,7 @@
     </div>
 
     <!-- Global Floating Zalo Button -->
-    <a class="global-fab-zalo" href="https://zalo.me/0982102088" target="_blank" rel="noopener" aria-label="Zalo HK Chính Xác">
+    <a class="global-fab-zalo" href="https://zalo.me/0971242363" target="_blank" rel="noopener" aria-label="Zalo Starpx Apac">
       <img src="/images/internal/zalo.webp" alt="Zalo" width="50" height="50" />
     </a>
   </div>

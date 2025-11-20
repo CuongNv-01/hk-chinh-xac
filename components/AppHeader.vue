@@ -27,13 +27,13 @@
                 <li>
                   <div class="unit unit-spacing-xs">
                     <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                    <div class="unit-body"><a class="phone" href="tel:0982102088">0982102088 | 0329809522</a></div>
+                    <div class="unit-body"><a class="phone" href="tel:0971242363">Mr Viet Anh 0971242363 | Mr Hieu 0329809522</a></div>
                   </div>
                 </li>
                 <li>
                   <div class="unit unit-spacing-xs">
                     <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                    <div class="unit-body"><a class="address" href="#">21, Huu Cuoc, O Dien, Ha Noi City</a></div>
+                    <div class="unit-body"><a class="address" href="#">Số 4 ngõ 2, Tây Sơn, TT Phùng, Hà Nội</a></div>
                   </div>
                 </li>
               </ul>
@@ -53,7 +53,7 @@
               <!-- RD Navbar Brand-->
               <div class="rd-navbar-brand">
                 <NuxtLink class="brand" :to="localePath('/')">
-                  <img class="brand-logo-dark" src="/logo/Logo_HK.svg" :alt="t('company.name')" width="219" height="39"/>
+                  <img class="brand-logo-dark" src="/logo/Logo_Apac.png" :alt="t('company.name')" width="219" height="39"/>
                 </NuxtLink>
               </div>
             </div>
@@ -64,13 +64,13 @@
                     <li>
                       <div class="unit unit-spacing-xs">
                         <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                        <div class="unit-body"><a class="phone" href="tel:0982102088">0982102088 | 0329809522</a></div>
+                        <div class="unit-body"><a class="phone" href="tel:0971242363">Mr Viet Anh 0971242363 | Mr Hieu 0329809522</a></div>
                       </div>
                     </li>
                     <li>
                       <div class="unit unit-spacing-xs">
                         <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                        <div class="unit-body"><a class="address" href="#">21, Huu Cuoc, O Dien, Ha Noi City</a></div>
+                        <div class="unit-body"><a class="address" href="#">Số 4 ngõ 2, Tây Sơn, TT Phùng, Hà Nội</a></div>
                       </div>
                     </li>
                   </ul>

@@ -4,7 +4,7 @@
     <section class="bg-gray-7">
       <div class="breadcrumbs-custom box-transform-wrap context-dark">
         <div class="container">
-          <h3 class="breadcrumbs-custom-title" style="color: #000; font-weight: 900;">{{ t('servicesPage.pageTitle') }}</h3>
+          <h3 class="breadcrumbs-custom-title" style="color: #fff; font-weight: 900;">{{ t('servicesPage.pageTitle') }}</h3>
           <div class="breadcrumbs-custom-decor"></div>
         </div>
         <div class="box-transform" style="background-image: url(/logo/banner.png);"></div>

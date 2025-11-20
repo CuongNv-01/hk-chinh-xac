@@ -104,7 +104,7 @@
                       <div class="unit unit-spacing-xs flex-column flex-md-row">
                         <div class="unit-left"><span class="icon icon-24 mdi mdi-phone"></span></div>
                         <div class="unit-body">
-                          <a class="phone" href="tel:0982102088">0982102088 | 0329809522</a>
+                          <a class="phone" href="tel:0971242363">Mr Viet Anh 0971242363 | Mr Hieu 0329809522</a>
                         </div>
                       </div>
                     </div>
@@ -113,7 +113,7 @@
                       <div class="unit unit-spacing-xs flex-column flex-md-row">
                         <div class="unit-left"><span class="icon icon-28 mdi mdi-map-marker"></span></div>
                         <div class="unit-body">
-                          <a class="address" href="#">21, Huu Cuoc, O Dien, Ha Noi City</a>
+                          <a class="address" href="#">Số 4 ngõ 2, Tây Sơn, TT Phùng, Hà Nội</a>
                         </div>
                       </div>
                     </div>
@@ -122,7 +122,7 @@
                       <div class="unit unit-spacing-xs flex-column flex-md-row">
                         <div class="unit-left"><span class="icon mdi mdi-email"></span></div>
                         <div class="unit-body">
-                          <a class="mail" href="mailto:cokhichinhxachk@gmail.com">cokhichinhxachk@gmail.com</a>
+                          <a class="mail" href="mailto:thanhcongphat2016@gmail.com">thanhcongphat2016@gmail.com</a>
                         </div>
                       </div>
                     </div>
