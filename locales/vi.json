@@ -91,7 +91,7 @@
   "news": {
     "isoTitle": "Starpx Apac đạt chứng nhận ISO 9001:2015",
     "newProductTitle": "Ra mắt dòng khuôn mẫu nhựa tiêu chuẩn FUTABA mới",
-    "author": "Admin HK",
+    "author": "Admin Starpx Apac",
     "altText": {
       "iso": "Tin tức Starpx Apac - Chứng nhận ISO 9001:2015",
       "futaba": "Tin tức Starpx Apac - Khuôn mẫu nhựa tiêu chuẩn FUTABA"
@@ -99,21 +99,21 @@
   },
   "seo": {
     "title": "Starpx Apac - Công Nghệ Cơ Khí Chính Xác | Khuôn Nhựa & Gia Công CNC",
-    "description": "Công ty Cơ Khí Chính Xác HK chuyên sản xuất khuôn nhựa, nhôm, dập, đồ giá, jig kiểm với độ chính xác cao. Gia công CNC HITACHI, OKUMA, EDM Charmilles. Sản xuất linh kiện nhựa công nghiệp, y tế, gia dụng chất lượng cao tại Việt Nam.",
+    "description": "Công ty Cơ Khí Starpx Apac chuyên sản xuất khuôn nhựa, đúc nhôm, dập, đồ giá, jig kiểm với độ chính xác cao. Gia công CNC HITACHI, OKUMA, EDM Charmilles. Sản xuất linh kiện nhựa công nghiệp, y tế, gia dụng chất lượng cao tại Việt Nam.",
     "keywords": "khuôn nhựa, gia công CNC, khuôn dập, jig kiểm, máy CNC HITACHI, OKUMA, EDM Charmilles, sản phẩm nhựa công nghiệp, cơ khí chính xác, Starpx Apac"
   },
   "company": {
     "name": "Starpx Apac",
-    "fullName": "Công Nghệ Cơ Khí Chính Xác HK",
-    "description": "Công ty Cơ Khí Chính Xác HK chuyên sản xuất khuôn nhựa, nhôm, dập, đồ giá, jig kiểm với độ chính xác cao."
+    "fullName": "Công Nghệ Cơ Khí Chính Xác Starpx Apac",
+    "description": "Công ty Cơ Khí Starpx Apac chuyên sản xuất khuôn nhựa, đúc nhôm, dập, đồ giá, jig kiểm với độ chính xác cao."
   },
   "about": {
     "pageTitle": "Về Chúng Tôi",
-    "title": "Công Nghệ Cơ Khí Chính Xác HK",
+    "title": "Công Nghệ Cơ Khí Chính Xác Starpx Apac",
     "subtitle": "Đối tác tin cậy trong lĩnh vực gia công cơ khí chính xác",
     "description": "Starpx Apac được thành lập năm 2015, chuyên sản xuất khuôn mẫu nhựa, khuôn nhôm, khuôn dập và các sản phẩm cơ khí chính xác. Với đội ngũ kỹ sư giàu kinh nghiệm và trang thiết bị hiện đại, chúng tôi cam kết mang đến sản phẩm chất lượng cao cho khách hàng.",
     "seoDescription": "Tìm hiểu về Công ty Starpx Apac - đơn vị hàng đầu trong lĩnh vực sản xuất khuôn mẫu và gia công cơ khí chính xác với công nghệ hiện đại và đội ngũ chuyên nghiệp.",
-    "ogDescription": "Công ty HK chuyên sản xuất khuôn mẫu và gia công cơ khí theo tiêu chuẩn với công nghệ hiện đại.",
+    "ogDescription": "Công ty Starpx Apac chuyên sản xuất khuôn mẫu và gia công cơ khí theo tiêu chuẩn với công nghệ hiện đại.",
     "experienceTitle": "Nhiều năm kinh nghiệm",
     "orientation": "Định hướng",
     "goals": "Mục tiêu",
@@ -122,8 +122,8 @@
     "goalsTitle": "Mục tiêu phát triển",
     "goalsContent1": "Trở thành doanh nghiệp dẫn đầu về gia công cơ khí chính xác cao tại Việt Nam. Mở rộng thị trường xuất khẩu sang nước ngoài.",
     "goalsContent2": "Đầu tư hệ thống máy móc thiết bị hiện đại, nâng cao chất lượng sản phẩm và dịch vụ. Xây dựng đội ngũ nhân sự chuyên nghiệp, sáng tạo và tận tâm với khách hàng.",
-    "companyIntroTitle": "Giới thiệu về Công ty HK",
-    "companyIntroContent": "Công ty HK là đơn vị hàng đầu trong lĩnh vực sản xuất khuôn mẫu và gia công cơ khí theo tiêu chuẩn. Chúng tôi chuyên sản xuất các loại mặt hàng gia dụng, sản phẩm cơ khí, các linh kiện, phụ tùng cho các ngành nghề ô tô, xe máy...",
+    "companyIntroTitle": "Giới thiệu về Công ty Starpx Apac",
+    "companyIntroContent": "Công ty Starpx Apac là đơn vị hàng đầu trong lĩnh vực sản xuất khuôn mẫu và gia công cơ khí theo tiêu chuẩn. Chúng tôi chuyên sản xuất các loại mặt hàng gia dụng, sản phẩm cơ khí, các linh kiện, phụ tùng cho các ngành nghề ô tô, xe máy...",
     "modernTechDescription": "Sử dụng máy CNC và hệ thống EDM Charmilles tiên tiến.",
     "precisionEquipmentDescription": "Máy ép nhựa Sumitomo, thiết bị kiểm tra CMM Zeiss đảm bảo độ chính xác cao.",
     "internationalStandardsTitle": "Tiêu chuẩn Quốc tế",
@@ -213,7 +213,7 @@
       "service": "Sản xuất khuôn mẫu"
     },
     "companyTitle": "Công ty Starpx Apac",
-    "companyDescription": "Công Ty HK là đơn vị hàng đầu trong lĩnh vực sản xuất khuôn mẫu và gia công cơ khí theo tiêu chuẩn. Chúng tôi chuyên sản xuất các loại mặt hàng gia dụng, sản phẩm cơ khí, các linh kiện, phụ tùng cho các ngành nghề ô tô, xe máy...",
+    "companyDescription": "Công Ty Starpx Apac là đơn vị hàng đầu trong lĩnh vực sản xuất khuôn mẫu và gia công cơ khí theo tiêu chuẩn. Chúng tôi chuyên sản xuất các loại mặt hàng gia dụng, sản phẩm cơ khí, các linh kiện, phụ tùng cho các ngành nghề ô tô, xe máy...",
     "contactCall": "Liên hệ với chúng tôi để được tư vấn miễn phí!",
     "accordion": {
       "qualityCommitment": {

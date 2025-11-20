@@ -95,7 +95,7 @@ export default defineNuxtConfig({
   site: {
     url: 'https://cokhihk.com',
     name: 'Starpx Apac',
-    description: 'Công ty Cơ Khí Chính Xác HK chuyên sản xuất khuôn nhựa, nhôm, dập, đồ giá, jig kiểm với độ chính xác cao. Gia công CNC và sản xuất sản phẩm nhựa công nghiệp tại Việt Nam.',
+    description: 'Công ty Cơ Khí Starpx Apac chuyên sản xuất khuôn nhựa, đúc nhôm, dập, đồ giá, jig kiểm với độ chính xác cao. Gia công CNC và sản xuất sản phẩm nhựa công nghiệp tại Việt Nam.',
     defaultLocale: 'vi'
   },
 
