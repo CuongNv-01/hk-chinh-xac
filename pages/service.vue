@@ -30,7 +30,7 @@
                 <div class="col-xl-5">
                   <article class="team-classic">
                     <a class="team-classic-figure" href="#">
-                      <img src="/images/internal/b19.jpeg" alt="" width="270" height="182"/>
+                      <img src="/images/internal/b10.jpeg" alt="" width="270" height="182"/>
                     </a>
                     <div class="team-classic-title">{{ t('serviceDetail.contactCall') }}</div>
                   </article>

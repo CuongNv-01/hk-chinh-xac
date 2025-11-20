@@ -43,7 +43,7 @@
               <div class="tab-pane fade show active" id="tabs-4-2">
                 <h4>{{ t('about.orientationTitle') }}</h4>
                 <p>{{ t('about.orientationContent') }}</p>
-                <img src="/images/internal/b19.jpeg" alt="" width="835" height="418"/>
+                <img src="/images/internal/b10.jpeg" alt="" width="835" height="418"/>
               </div>
               <div class="tab-pane fade" id="tabs-4-3">
                 <h4>{{ t('about.goalsTitle') }}</h4>
