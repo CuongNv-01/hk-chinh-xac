@@ -74,12 +74,14 @@
       "plasticProducts": "Plastic Products",
       "aluminumProducts": "Cast Aluminum Products",
       "machinery": "Machinery",
+      "mechanical": "Mechanical Products",
       "others": "Others"
     },
     "altTexts": {
       "plasticProduct": "Plastic product {number} - Starpx Apac",
       "aluminumProduct": "Aluminum product {number} - Starpx Apac",
       "machinery": "Machinery equipment {item} - Starpx Apac",
+      "mechanical": "Mechanical product {number} - Starpx Apac",
       "product": "Machined product {number} - Starpx Apac"
     }
   },

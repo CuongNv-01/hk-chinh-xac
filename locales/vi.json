@@ -74,12 +74,14 @@
       "plasticProducts": "Sản Phẩm Nhựa",
       "aluminumProducts": "Sản Phẩm Đúc Nhôm",
       "machinery": "Máy Móc",
+      "mechanical": "Cơ Khí",
       "others": "Khác"
     },
     "altTexts": {
       "plasticProduct": "Sản phẩm nhựa {number} - Starpx Apac",
       "aluminumProduct": "Sản phẩm nhôm {number} - Starpx Apac",
       "machinery": "Máy móc thiết bị {item} - Starpx Apac",
+      "mechanical": "Sản phẩm cơ khí {number} - Starpx Apac",
       "product": "Sản phẩm gia công {number} - Starpx Apac"
     }
   },

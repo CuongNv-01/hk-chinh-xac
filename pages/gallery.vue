@@ -30,6 +30,7 @@
           <ul class="isotope-filters-list">
             <li><a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">{{ t('common.all') }}</a></li>
             <li><a href="#" data-isotope-filter="may" data-isotope-group="gallery">{{ t('gallery.categories.machinery') }}</a></li>
+            <li><a href="#" data-isotope-filter="co-khi" data-isotope-group="gallery">{{ t('gallery.categories.mechanical') }}</a></li>
             <li><a href="#" data-isotope-filter="nhom" data-isotope-group="gallery">{{ t('gallery.categories.aluminumProducts') }}</a></li>
             <li><a href="#" data-isotope-filter="nhua" data-isotope-group="gallery">{{ t('gallery.categories.plasticProducts') }}</a></li>
             <li><a href="#" data-isotope-filter="khac" data-isotope-group="gallery">{{ t('gallery.categories.others') }}</a></li>
@@ -47,6 +48,14 @@
             <article class="thumbnail thumbnail-modern">
               <a class="thumbnail-modern-figure" :href="`/images/internal/new/may-moc/${item}.jpeg`" data-lightgallery="item">
                 <img :src="`/images/internal/new/may-moc/${item}.jpeg`" :alt="t('gallery.altTexts.machinery', { item })" width="474" height="355" loading="lazy"/>
+              </a>
+            </article>
+          </div>
+          <!-- Cơ khí -->
+          <div :class="i === 1 ? 'col-12 isotope-item' : 'col-sm-6 col-lg-4 col-xxl-3 isotope-item'" data-filter="co-khi" v-for="i in 45" :key="`co-khi-${i}`">
+            <article class="thumbnail thumbnail-modern">
+              <a class="thumbnail-modern-figure" :href="`/images/internal/new/co-khi/${i}.jpg`" data-lightgallery="item">
+                <img :src="`/images/internal/new/co-khi/${i}.jpg`" :alt="t('gallery.altTexts.mechanical', { number: i })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>

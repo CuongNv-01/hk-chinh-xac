@@ -74,12 +74,14 @@
       "plasticProducts": "プラスチック製品",
       "aluminumProducts": "アルミ鋳造製品",
       "machinery": "機械設備",
+      "mechanical": "機械製品",
       "others": "その他"
     },
     "altTexts": {
       "plasticProduct": "プラスチック製品 {number} - Starpx Apac",
       "aluminumProduct": "アルミニウム製品 {number} - Starpx Apac",
       "machinery": "機械設備 {item} - Starpx Apac",
+      "mechanical": "機械製品 {number} - Starpx Apac",
       "product": "加工製品 {number} - Starpx Apac"
     }
   },
