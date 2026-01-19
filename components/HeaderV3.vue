@@ -157,7 +157,7 @@
           </div>
           <div class="contact-item">
             <i class="mdi mdi-email"></i>
-            <a href="mailto:thanhcongphat2016@gmail.com">thanhcongphat2016@gmail.com</a>
+            <a href="mailto:congtyapac2025@gmail.com">congtyapac2025@gmail.com</a>
           </div>
         </div>
       </div>

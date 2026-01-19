@@ -119,7 +119,7 @@
                   <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
                     <div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
                     <div class="unit-body">
-                      <a class="mail" href="mailto:thanhcongphat2016@gmail.com">thanhcongphat2016@gmail.com</a>
+                      <a class="mail" href="mailto:congtyapac2025@gmail.com">congtyapac2025@gmail.com</a>
                     </div>
                   </div>
                 </div>

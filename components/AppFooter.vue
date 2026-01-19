@@ -41,7 +41,7 @@
                   <div class="footer-classic-contacts-item">
                     <div class="unit unit-spacing-sm align-items-center">
                       <div class="unit-left"><span class="icon mdi mdi-email"></span></div>
-                      <div class="unit-body"><a class="mail" href="mailto:thanhcongphat2016@gmail.com">thanhcongphat2016@gmail.com</a></div>
+                      <div class="unit-body"><a class="mail" href="mailto:congtyapac2025@gmail.com">congtyapac2025@gmail.com</a></div>
                     </div>
                   </div>
                 </div>
