@@ -59,6 +59,15 @@ export const useGallery = () => {
           })
         })
         
+        // Apply the initially-active filter so the grid matches the highlighted tab
+        const activeFilterEl = document.querySelector('[data-isotope-filter].active')
+        if (activeFilterEl) {
+          const initialFilter = activeFilterEl.getAttribute('data-isotope-filter')
+          isotopeInstance.arrange({
+            filter: initialFilter && initialFilter !== '*' ? `[data-filter="${initialFilter}"]` : '*'
+          })
+        }
+
         // Layout after images load
         const images = grid.querySelectorAll('img')
         let loadedImages = 0

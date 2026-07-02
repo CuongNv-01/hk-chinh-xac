@@ -80,21 +80,21 @@ const services = computed(() => [
     id: 2,
     title: t('services.cncMachining.title'),
     description: t('services.cncMachining.description'),
-    image: '/images/internal/b13.jpeg',
+    image: '/images/internal/b12.jpeg',
     icon: 'mdi mdi-home-modern'
   },
   {
     id: 3,
     title: t('services.plasticProducts.title'),
     description: t('services.plasticProducts.description'),
-    image: '/images/internal/may-1.jpeg',
+    image: '/images/internal/nhua-2.jpeg',
     icon: 'mdi mdi-worker'
   },
   {
     id: 4,
     title: t('services.technicalConsulting.title'),
     description: t('services.technicalConsulting.description'),
-    image: '/images/internal/nhom-4.jpeg',
+    image: '/images/internal/nhom-2.jpeg',
     icon: 'mdi mdi-home'
   },
   {

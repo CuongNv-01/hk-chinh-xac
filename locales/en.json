@@ -16,8 +16,9 @@
     "heroTitle": "Starpx Apac Joint Stock Company",
     "heroSubtitle": "Specializing in manufacturing plastic molds, aluminum molds, stamping dies, fixtures, and inspection jigs with high precision",
     "equipmentTitle": "Equipment",
+    "locationTitle": "Our Location",
     "productsServicesTitle": "Products & Services",
-    "productsTitle": "Machined Products",
+    "productsTitle": "Featured Products",
     "latestNewsTitle": "Latest News",
     "videoNotSupported": "Your browser does not support the video tag."
   },
@@ -74,7 +75,7 @@
       "plasticProducts": "Plastic Products",
       "aluminumProducts": "Cast Aluminum Products",
       "machinery": "Machinery",
-      "mechanical": "Mechanical Products",
+      "mechanical": "Molds",
       "others": "Others"
     },
     "altTexts": {

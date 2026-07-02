@@ -49,6 +49,24 @@
       </div>
     </div>
 
+    <!-- Location Map -->
+    <section class="section section-lg bg-gray-100 section-map">
+      <div class="container">
+        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">{{ t('homepage.locationTitle') }}</span></h3>
+        <div class="map-wrapper wow fadeInUp">
+          <iframe
+            src="https://maps.google.com/maps?q=21.082223,105.677868&z=16&t=k&output=embed"
+            width="100%"
+            height="340"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            :title="t('homepage.locationTitle')"></iframe>
+        </div>
+      </div>
+    </section>
+
     <!-- About Company-->
     <section class="section section-md bg-gray-100 text-md-left section-relative">
       <div class="container">
@@ -78,8 +96,8 @@
           <div class="col-lg-12">
             <div class="featured-equipment-media wow fadeInLeft">
               <div class="video-wrapper">
-                <video class="featured-video" poster="/images/internal/b14.jpeg" controls preload="metadata">
-                  <source src="/images/internal/b16-video.mp4" type="video/mp4">
+                <video class="featured-video" poster="/images/internal/new-2/1.png" controls preload="metadata">
+                  <source src="/images/internal/new-2/video.mp4" type="video/mp4">
                   {{ t('homepage.videoNotSupported') }}
                 </video>
               </div>
@@ -130,8 +148,7 @@
             <span class="icon mdi mdi-chevron-down"></span>{{ t('common.filter') }}
           </button>
           <ul class="isotope-filters-list">
-            <li><a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">{{ t('common.all') }}</a></li>
-            <li><a href="#" data-isotope-filter="may" data-isotope-group="gallery">{{ t('gallery.categories.machinery') }}</a></li>
+            <li><a class="active" href="#" data-isotope-filter="may" data-isotope-group="gallery">{{ t('gallery.categories.machinery') }}</a></li>
             <li><a href="#" data-isotope-filter="co-khi" data-isotope-group="gallery">{{ t('gallery.categories.mechanical') }}</a></li>
             <li><a href="#" data-isotope-filter="nhom" data-isotope-group="gallery">{{ t('gallery.categories.aluminumProducts') }}</a></li>
             <li><a href="#" data-isotope-filter="nhua" data-isotope-group="gallery">{{ t('gallery.categories.plasticProducts') }}</a></li>
@@ -146,15 +163,23 @@
              data-lightgallery="group">
           <div class="col-1 isotope-item isotope-sizer"></div>
           <!-- Máy móc -->
-          <div :class="item === 0 ? 'col-12 isotope-item' : 'col-sm-6 col-lg-4 col-xxl-3 isotope-item'" data-filter="may" v-for="item in [0,1,4,8,10,11,12]" :key="item">
+          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="may" v-for="item in [0,1,4,8,10,11,12]" :key="item">
             <article class="thumbnail thumbnail-modern">
               <a class="thumbnail-modern-figure" :href="`/images/internal/new/may-moc/${item}.jpeg`" data-lightgallery="item">
                 <img :src="`/images/internal/new/may-moc/${item}.jpeg`" :alt="t('gallery.altTexts.machinery', { item })" width="474" height="355" loading="lazy"/>
               </a>
             </article>
           </div>
+          <!-- Máy móc (new-2) -->
+          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="may" v-for="n in 8" :key="`may-new2-${n}`">
+            <article class="thumbnail thumbnail-modern">
+              <a class="thumbnail-modern-figure" :href="`/images/internal/new-2/${n}.png`" data-lightgallery="item">
+                <img :src="`/images/internal/new-2/${n}.png`" :alt="t('gallery.altTexts.machinery', { item: n })" width="474" height="355" loading="lazy"/>
+              </a>
+            </article>
+          </div>
           <!-- Cơ khí -->
-          <div :class="i === 1 ? 'col-12 isotope-item' : 'col-sm-6 col-lg-4 col-xxl-3 isotope-item'" data-filter="co-khi" v-for="i in 45" :key="`co-khi-${i}`">
+          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="co-khi" v-for="i in coKhiImages" :key="`co-khi-${i}`">
             <article class="thumbnail thumbnail-modern">
               <a class="thumbnail-modern-figure" :href="`/images/internal/new/co-khi/${i}.jpg`" data-lightgallery="item">
                 <img :src="`/images/internal/new/co-khi/${i}.jpg`" :alt="t('gallery.altTexts.mechanical', { number: i })" width="474" height="355" loading="lazy"/>
@@ -162,7 +187,7 @@
             </article>
           </div>
           <!-- Sản phẩm Nhôm -->
-          <div :class="i === 1 ? 'col-12 isotope-item' : 'col-sm-6 col-lg-4 col-xxl-3 isotope-item'" data-filter="nhom" v-for="i in [1,2,3,4,5,6,7,8,9,10,11]" :key="`nhom-${i}`">
+          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="nhom" v-for="i in [1,2,3,4,5,6,7,8,9,10,11]" :key="`nhom-${i}`">
             <article class="thumbnail thumbnail-modern">
               <a class="thumbnail-modern-figure" :href="`/images/internal/new/san-pham-nhom/${i}.jpeg`" data-lightgallery="item">
                 <img :src="`/images/internal/new/san-pham-nhom/${i}.jpeg`" :alt="t('gallery.altTexts.aluminumProduct', { number: i })" width="474" height="355" loading="lazy"/>
@@ -170,7 +195,7 @@
             </article>
           </div>
           <!-- Sản phẩm Nhựa -->
-          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="nhua" v-for="i in [1,2,3,4,5,6,7]" :key="`nhua-${i}`">
+          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="nhua" v-for="i in [1,2,5,6,7]" :key="`nhua-${i}`">
             <article class="thumbnail thumbnail-modern">
               <a class="thumbnail-modern-figure" :href="`/images/internal/new/san-pham-nhua/${i}.jpeg`" data-lightgallery="item">
                 <img :src="`/images/internal/new/san-pham-nhua/${i}.jpeg`" :alt="t('gallery.altTexts.plasticProduct', { number: i })" width="474" height="355" loading="lazy"/>
@@ -178,7 +203,7 @@
             </article>
           </div>
           <!-- Khác -->
-          <div :class="i === 0 ? 'col-12 isotope-item' : 'col-sm-6 col-lg-4 col-xxl-3 isotope-item'" data-filter="khac" v-for="i in [2,3,5,6,7,9]" :key="`other-${i}`">
+          <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item" data-filter="khac" v-for="i in [2,3,5,6,7,9]" :key="`other-${i}`">
             <article class="thumbnail thumbnail-modern">
               <a class="thumbnail-modern-figure" :href="`/images/internal/new/${i}.jpeg`" data-lightgallery="item">
                 <img :src="`/images/internal/new/${i}.jpeg`" :alt="t('gallery.altTexts.product', { number: i })" width="474" height="355" loading="lazy"/>
@@ -382,6 +407,9 @@ useSchemaOrg(() => [
 
 // Removed Swiper config - using static banner instead
 
+// Cơ khí gallery: only images that exist in public/images/internal/new/co-khi/
+const coKhiImages = [1,2,3,4,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,30,31,32,33,34,35,36,37,38,39,40,41,42,43]
+
 const features = computed(() => [
   {
     id: 1,
@@ -430,7 +458,7 @@ const services = computed(() => [
   },
   {
     id: 3,
-    image: '/images/internal/nhua-4.jpeg',
+    image: '/images/internal/nhua-2.jpeg',
     title: t('services.plasticProducts.title'),
     description: t('services.plasticProducts.description')
   },
@@ -442,13 +470,13 @@ const services = computed(() => [
   },
   {
     id: 5,
-    image: '/images/internal/b5.jpeg',
+    image: '/images/internal/b9.jpeg',
     title: t('services.qualityControl.title'),
     description: t('services.qualityControl.description')
   },
   {
     id: 6,
-    image: '/images/internal/b6.jpeg',
+    image: '/images/internal/b12.jpeg',
     title: t('services.warrantySupport.title'),
     description: t('services.warrantySupport.description')
   }
@@ -713,6 +741,59 @@ onMounted(() => {
   .services-carousel .swiper-button-prev {
     display: none;
   }
+}
+
+/* Location map */
+.section-map h3 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+.map-wrapper {
+  margin-top: 40px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 0;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.12), 0 4px 12px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.map-wrapper iframe {
+  display: block;
+  width: 100%;
+}
+
+/* Uniform gallery tiles — same width & height across all tabs/categories */
+.isotope-wrap .thumbnail-modern {
+  height: 100%;
+  margin-bottom: 0;
+}
+
+.isotope-wrap .thumbnail-modern-figure {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.isotope-wrap .thumbnail-modern-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.isotope-wrap .thumbnail-modern-figure:hover img {
+  transform: scale(1.05);
 }
 
 /* Floating Action Buttons */
