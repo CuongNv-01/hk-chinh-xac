@@ -91,7 +91,7 @@
     <!-- Featured Equipment Section -->
     <section class="section section-lg section-equipment">
       <div class="container">
-        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">{{ t('homepage.equipmentTitle') }}</span></h3>
+        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Sản phẩm tiêu biểu</span></h3>
         <div class="row row-50 align-items-center">
           <div class="col-lg-12">
             <div class="featured-equipment-media wow fadeInLeft">
@@ -140,7 +140,7 @@
     <!-- Product Gallery with Filters-->
     <section class="section section-lg bg-default isotope-wrap">
       <div class="container">
-        <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">{{ t('homepage.productsTitle') }}</span></h3>
+        <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">Trang thiết bị</span></h3>
         <div class="isotope-filters isotope-filters-horizontal" style="margin-top: 40px;">
           <button class="isotope-filters-toggle button button-sm button-icon button-icon-right button-gray-3"
                   data-custom-toggle=".isotope-filters-list"
